@@ -1,0 +1,350 @@
+.booking {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.booking-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.booking-content {
+  text-align: center;
+}
+
+.booking-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.booking-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.booking-requirements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.requirement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.requirement-icon {
+  font-size: 2rem;
+}
+
+.requirement span:last-child {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.telegram-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--accent-color);
+  color: white;
+  padding: 1.25rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  margin-bottom: 3rem;
+}
+
+.telegram-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(59, 130, 246, 0.4);
+}
+
+.telegram-icon {
+  font-size: 1.5rem;
+}
+
+.booking-process {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.booking-process h3 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  background: var(--accent-color);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.step-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.refund-policy {
+  background: var(--bg-secondary);
+  border-left: 4px solid var(--accent-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.refund-policy h4 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.refund-policy p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.refund-policy strong {
+  color: var(--accent-color);
+}
+
+/* Policies Section */
+.policies-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.policy-box {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: left;
+  transition: all 0.3s;
+}
+
+.policy-box:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.15);
+}
+
+.policy-box.refund {
+  border-color: var(--accent-color);
+  border-left-width: 5px;
+}
+
+.policy-box h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.policy-content p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.policy-content p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-content strong {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* Contact Agreement */
+.contact-agreement {
+  background: rgba(255, 107, 53, 0.1);
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.agreement-text {
+  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 3rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.contact-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+}
+
+.contact-button.telegram {
+  background: linear-gradient(135deg, #0088cc, #00a0e9);
+  color: white;
+}
+
+.contact-button.telegram:hover {
+  background: linear-gradient(135deg, #007ab8, #0099db);
+}
+
+.contact-button.phone {
+  background: linear-gradient(135deg, var(--accent-color), #ff8c66);
+  color: white;
+}
+
+.contact-button.phone:hover {
+  background: linear-gradient(135deg, #ff5722, var(--accent-color));
+}
+
+.button-icon {
+  font-size: 1.5rem;
+}
+
+.service-area-info {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: left;
+}
+
+.service-area-info h3 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.areas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.area {
+  background: var(--bg-primary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.area h4 {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.area p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .booking {
+    padding: 2rem 1rem;
+  }
+  
+  .booking-content h2 {
+    font-size: 2rem;
+  }
+  
+  .booking-requirements {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  .policies-section {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-button {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}

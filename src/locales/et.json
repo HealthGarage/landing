@@ -1,0 +1,288 @@
+{
+  "header": {
+    "title": "HealthGarage",
+    "subtitle": "Mobiilne Diagnostika",
+    "aboutUs": "Meist",
+    "services": "Teenused",
+    "pricing": "Hinnad",
+    "faq": "KKK",
+    "bookNow": "Broneeri"
+  },
+  "hero": {
+    "title": "Ole teadlik oma auto veast",
+    "titleAccent": "Enne Maksmist",
+    "subtitle": "Professionaalne auto diagnostika. Me tuleme teie juurde või te toote auto meile. Saate ausad vastused enne remonti.",
+    "diagnosticsFirst": "Diagnostika Esmalt",
+    "mobileService": "Mobiilne Teenus",
+    "hours": "18:00 – 23:00",
+    "ctaButton": "Broneeri Diagnostika"
+  },
+  "aboutUs": {
+    "title": "Miks Valida Meid?",
+    "subtitle": "Spetsialiseerume autodiagnostikale kuni 2021. aasta autodel. Meie meister tuleb teie juurde kõigi seadmetega — pole vaja kuhugi sõita! Töötame ausalt, ilma liigse hinnatõusuta ja alati selgitame, mida teie auto tegelikult vajab.",
+    "reasons": {
+      "noTime": "Pole aega töökoja külastamiseks",
+      "unsafeToDrive": "Pole kindel, kas autoga on ohutu sõita",
+      "avoidUnnecessary": "Soovite vältida ebavajalikke remonditöid",
+      "honestAdvice": "Otsite ausaid, sõltumatuid nõuandeid",
+      "clearUnderstanding": "Vajate selget arusaamist enne remonti"
+    }
+  },
+  "services": {
+    "title": "Meie Teenused",
+    "subtitle": "Teenused sõltuvalt piirkonnast",
+    "regions": {
+      "kehra": "Kehra",
+      "other": "Teised Linnad"
+    },
+    "basicDiagnostic": {
+      "title": "Põhidiagnostika",
+      "description": "Kiire auto kontroll arusaadavate selgitustega.",
+      "features": [
+        "Veakoodide lugemine",
+        "Probleemide selgitamine lihtsas keeles",
+        "Remondi prioriteet: mis on kiire, mis võib oodata",
+        "Veakoodide kustutamine (kui ohutu)"
+      ]
+    },
+    "fullDiagnostic": {
+      "title": "Täielik Süsteemidiagnostika",
+      "description": "Põhjalik kõigi autosüsteemide skaneerimine koos üksikasjaliku aruandega.",
+      "features": [
+        "Kõigi autosüsteemide skaneerimine",
+        "Mootori, käigukasti, ABS, turvapadi kontroll",
+        "Üksikasjalik seisuaruanne",
+        "Selged remondisoovitused"
+      ]
+    },
+    "software": {
+      "title": "Tarkvaratöökoda",
+      "description": "Adaptatsioonid, kodeerimine ja lähtestused VAG sõidukitele ja teistele.",
+      "features": [
+        "VAG grupi spetsialist (Audi, VW, Škoda, SEAT)",
+        "Teised margid — kokkuleppel",
+        "30 € / tund",
+        "Arvestus 15-minutiliste intervallidega"
+      ]
+    },
+    "repair": {
+      "title": "Remonditööd",
+      "description": "Diagnostikapõhised remondid meie garaazhis mittekiireloomuliste tööde jaoks.",
+      "features": [
+        "Ainult pärast diagnostikat",
+        "35 € / tund",
+        "Mittekiireloomulised tööd",
+        "Kvaliteet üle kiiruse"
+      ]
+    },
+    "maintenance": {
+      "title": "Hooldus (Kiirteenus)",
+      "description": "Õlivahetused, filtrid ja põhihooldus valitud kaubamärkidele.",
+      "features": [
+        "Õli ja filtrite vahetus",
+        "BMW, Mercedes, VAG",
+        "20 € / tund",
+        "Tüüpiline kestus 1-2 tundi"
+      ]
+    },
+    "whyTitle": "Miks HealthGarage?",
+    "whyDescription": "Enamik autoomanikke lähevad töökotta teadmata tegelikku probleemi. See viib sageli ebavajalike remontideni, aja raiskamiseni ja kõrgemate kuludeni. HealthGarage toimib diagnostika-esmasena teenusena — andes teile selgust, prioriteete ja realistlikke järgmisi samme enne raha kulutamist."
+  },
+  "serviceArea": {
+    "title": "Teeninduspiirkond",
+    "subtitle": "Töötame Tallinnas, Maardus, Kehras ja kaugemal",
+    "tallinn": {
+      "title": "🏙️ Tallinn",
+      "description": "Kõik linnaosad, õhtune teenus 18:00 – 23:00"
+    },
+    "maardu": {
+      "title": "🏘️ Maardu",
+      "description": "Mobiilne diagnostika saadaval"
+    },
+    "kehra": {
+      "title": "🏭 Kehra",
+      "description": "Meie garaazh remontide ja hoolduse jaoks"
+    },
+    "outside": {
+      "title": "🚗 Väljaspool (100+ km)",
+      "description": "Saadaval kokkuleppel"
+    }
+  },
+  "pricing": {
+    "title": "Hinnad",
+    "subtitle": "Läbipaistev hinnakujundus aja ja vahemaa põhjal",
+    "locations": {
+      "tallinn": "Tallinn",
+      "maardu": "Maardu",
+      "kehra": "Kehra",
+      "other": "Muu"
+    },
+    "chooseTypeInfo": "Valige mugav variant: fikseeritud hind (lihtne ja selge) või kauguse järgi (täpne hind)",
+    "basicDiagnostic": "Tavaline Diagnostika",
+    "fullDiagnostic": "Täielik Diagnostika",
+    "fixedPrice": "Fikseeritud Hind",
+    "distancePrice": "Vahemaa Järgi",
+    "mobileToYou": "Me tuleme teie juurde",
+    "bringToUs": "Te toote meile",
+    "youBringTo": "Te toote",
+    "weComeTo": "Me tuleme",
+    "customerBringsCar": "Klient Toob Auto",
+    "mobileService": "Mobiilne Teenus",
+    "fuelPricing": "kilomeetrite järgi",
+    "allDistricts": "Kõik linnaosad",
+    "tariffApplies": "tariif kehtib",
+    "outsideTallinnMaardu": "Väljaspool Tallinna ja Maardut",
+    "alternative": "alternatiiv",
+    "diagnosticsIncluded": "diagnostika sisaldub",
+    "diagnostics": "diagnostika",
+    "calculatorTab": "Vahemaa Kalkulaator",
+    "calculatorTitle": "Arvuta Oma Hind",
+    "calculatorDescription": "Reguleerige liugurit vahemaa määramiseks ja valige ajavahemik mobiilse teenuse hinna arvutamiseks.",
+    "distance": "Vahemaa",
+    "km": "km",
+    "hour": "tund",
+    "timeSlot": "Ajavahemik",
+    "diagnosticsFee": "Diagnostika Tasu",
+    "pricePerKm": "Hind km kohta",
+    "totalPrice": "Koguhind",
+    "estimatedPrice": "Hinnanguline Hind",
+    "lateHoursNotice": "Hilistunni tariif (2×) rakendatud",
+    "importantInfo": "Oluline Informatsioon",
+    "infoItem1": "Hinnad kajastavad tegelikku sõiduaega ja liiklusolukorda",
+    "infoItem2": "Broneeringu kinnitamiseks on vajalik 50% ettemaks",
+    "infoItem3": "Ülejäänud 50% makstakse kohapeal spetsialisti saabumisel",
+    "infoItem4": "Täielik tagastamine, kui diagnostikat ei saa teha",
+    "weekends": "Nädalavahetused ja Pühad",
+    "weekendsAndHolidays": "Nädalavahetused ja Pühad",
+    "constantPrice": "Konstantne hind kõigi diagnostika tüüpide jaoks",
+    "garageServices": "Garaaži Teenused (Kehra)",
+    "garageNote": "Ainult pärast diagnostikat. Mittekiireloomuliste tööde jaoks paindliku ajaga.",
+    "garage": {
+      "software": {
+        "title": "Tarkvaratöökoda",
+        "description": "Adaptatsioonid, kodeerimine, lähtestused (VAG ja teised)"
+      },
+      "repair": {
+        "title": "Remonditööd",
+        "description": "Pärast diagnostikat, mittekiireloomulised remondid"
+      },
+      "maintenance": {
+        "title": "Hooldus (Kiirteenus)",
+        "description": "Õli, filtrid, põhihooldus (BMW, Mercedes, VAG)"
+      }
+    },
+    "timeSlots": {
+      "peak": "18:00 – 19:00 (Tipptund)",
+      "reduced": "19:00 – 21:00 (Vähenenud Liiklus)",
+      "late": "21:00 – 23:00 (Hilistunnid - 2× tariif)"
+    }
+  },
+  "importantInfo": {
+    "title": "Oluline Informatsioon",
+    "diagnosticsGuidance": "Diagnostika annab suuna, kuid ei garanteeri remonditulemusi",
+    "noEmergency": "Kiireloomulisi või hädaolukorras remonditöid ei tehta",
+    "errorClearingSafe": "Veakoodide kustutamine ainult siis, kui see on ohutu",
+    "pricesConfirmed": "Hinnad kinnitatakse enne saabumist",
+    "eveningTariffs": "Kehtestavad õhtused ja hilistunnid tariifid"
+  },
+  "faq": {
+    "title": "Korduma Kippuvad Küsimused",
+    "subtitle": "Kõik, mida peate meie teenuste kohta teadma",
+    "q1": {
+      "question": "Kas te remondite autosid?",
+      "answer": "Jah. Valitud remondi- ja hooldustööd tehakse meie Kehra garaaZhis. Mobiilne teenus keskendub ainult diagnostikale."
+    },
+    "q2": {
+      "question": "Miks alustate alati diagnostikast?",
+      "answer": "Sest osade vahetus ilma põhjusest arusaamata toob sageli kaasa tarbetuid kulusid. Diagnostika võimaldab õigeid otsuseid."
+    },
+    "q3": {
+      "question": "Miks hinnad sõltuvad piirkonnast ja ajast?",
+      "answer": "Sest sõiduaeg Tallinnas varieerub märkimisväärselt liiklustingimuste tõttu. Hinnad kajastavad kulutatud aega, mitte ainult vahemaad."
+    },
+    "q4": {
+      "question": "Miks hiline õhtu on kallim?",
+      "answer": "Kella 21:00 kuni 23:00 kehtib hiliste tundide tariif piiratud kättesaadavuse ja pikendatud tööaja tõttu."
+    },
+    "q5": {
+      "question": "Mis juhtub, kui te saabute ja ei saa aidata?",
+      "answer": "Kui diagnostikat ega abi ei saa pakkuda, tagastatakse 50% ettemaks täielikult."
+    },
+    "q6": {
+      "question": "Miks on ettemaks nõutud?",
+      "answer": "Ettemaks tagab ajavahemiku ja katab sõiduaja. See hoiab ära viimase hetke tühistamised."
+    },
+    "q7": {
+      "question": "Kas diagnostika annab alati täpse vastuse?",
+      "answer": "Diagnostika annab suuna ja prioriteedid. Mõned mehaanilised probleemid võivad siiski vajada töökoja ülevaatust."
+    },
+    "q8": {
+      "question": "Kas saate kustutada veakoode?",
+      "answer": "Jah — ainult kui see on ohutu. Kui vea kustutamine võib varjata tõsist probleemi, selgitatakse seda esmalt."
+    },
+    "q9": {
+      "question": "Miks võib remont võtta kauem kui teistes töökodades?",
+      "answer": "HealthGarage ei ole mahukäive teenus. Me eelistame hoolikat diagnostikale põhinevat tööd kiirusele."
+    },
+    "q10": {
+      "question": "Kas saate teha kiireloomulist või sama päeva remonti?",
+      "answer": "Ei. Me ei paku hädaabi ega kiirustatud remonti. Kui sõidukit on kiireloomuliselt vaja, soovitame suuremat töökoda."
+    },
+    "q11": {
+      "question": "Milliste autodega te töötate?",
+      "answer": "Enamik Euroopa sõidukeid on diagnostika jaoks toetatud. Kiire hooldus on piiratud BMW, Mercedes-Benz ja VAG sõidukitega (Audi, VW, Škoda, SEAT)."
+    }
+  },
+  "booking": {
+    "title": "Broneeri Teenus",
+    "description": "Diagnostika või garaaži teenuse broneerimiseks võtke meiega ühendust Telegrami või telefoni teel, esitades järgmise teabe:",
+    "requirements": {
+      "carModel": "Auto mark ja mudel",
+      "year": "Aasta",
+      "issue": "Probleemi kirjeldus",
+      "location": "Teie asukoht"
+    },
+    "howItWorks": "Kuidas Broneerimine Toimib",
+    "steps": {
+      "contact": {
+        "title": "Kontakt",
+        "description": "Saatke auto üksikasjad ja probleemi kirjeldus"
+      },
+      "confirm": {
+        "title": "Kinnitus",
+        "description": "Probleem, aeg ja hind arutatakse ja kinnitatakse"
+      },
+      "advance": {
+        "title": "50% Ettemaks",
+        "description": "Makske 50% ettemaksu broneeringu tagamiseks"
+      },
+      "service": {
+        "title": "Teenus",
+        "description": "Ülejäänud 50% makstakse enne töö algust"
+      }
+    },
+    "policies": {
+      "payment": {
+        "title": "Maksepoliitika",
+        "item1": "Ajavahemiku tagamiseks on vajalik 50% ettemaks.",
+        "item2": "Ülejäänud 50% makstakse enne töö algust.",
+        "item3": "Ettemaks katab sõiduaja ja hoiab ära viimase hetke tühistamised.",
+        "item4": "Hinnad kinnitatakse enne saabumist."
+      },
+      "refund": {
+        "title": "Tagastamispoliitika",
+        "description": "Kui HealthGarage saabub ja ei saa diagnostikat ega abi pakkuda, tagastatakse ettemaks täielikult."
+      }
+    },
+    "agreement": "Meiega ühendust võttes nõustute meie makse- ja tagastamispoliitikaga",
+    "bookViaTelegram": "Broneeri Telegrami Kaudu",
+    "callDirectly": "Helista Otse"
+  },
+  "footer": {
+    "title": "HealthGarage",
+    "subtitle": "Mobiilne Diagnostika ja Sõltumatu Garaazh",
+    "contact": "Kontakt",
+    "serviceArea": "Teeninduspiirkond",
+    "copyright": "HealthGarage — Diagnostika-Esmane Lähenemine"
+  }
+}

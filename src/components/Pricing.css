@@ -1,0 +1,739 @@
+.pricing {
+  padding: 4rem 2rem;
+  background: var(--bg-secondary);
+}
+
+.pricing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Location Tabs */
+.location-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.location-tab {
+  background: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: var(--text-primary);
+}
+
+.location-tab.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
+.location-tab:hover:not(.active) {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* Pricing Type Info */
+.pricing-type-info {
+  text-align: center;
+  margin: 2rem 0 1.5rem;
+}
+
+.pricing-type-info p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Diagnostic Type Tabs */
+.diagnostic-type-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.diagnostic-tab {
+  background: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  padding: 0.7rem 1.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: var(--text-primary);
+}
+
+.diagnostic-tab.active {
+  background: linear-gradient(135deg, #4CAF50, #66BB6A);
+  border-color: #4CAF50;
+  color: white;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.diagnostic-tab:hover:not(.active) {
+  border-color: #4CAF50;
+  transform: translateY(-2px);
+}
+
+/* Pricing Type Tabs */
+.pricing-type-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.type-tab {
+  background: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  padding: 0.7rem 1.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: var(--text-primary);
+}
+
+.type-tab.active {
+  background: linear-gradient(135deg, var(--accent-color), #ff8c66);
+  border-color: var(--accent-color);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.type-tab:hover:not(.active) {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.predefined-pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.pricing-section {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.pricing-section h3 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+}
+
+.pricing-section h4 {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.price-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.price-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.price-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent-color);
+}
+
+.price-card h4 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin: 1rem 0;
+}
+
+.price-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.time-slot-section {
+  margin-bottom: 2rem;
+}
+
+.district-prices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.district-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent-color);
+}
+
+.district-name {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.district-price {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.alternative-price {
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.fuel-pricing {
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.fuel-pricing p {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.fuel-pricing ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.fuel-pricing li {
+  color: var(--text-secondary);
+  padding: 0.25rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.fuel-pricing li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+/* Calculator Styles */
+.calculator {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.calculator h3 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.calculator-description {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.calculate-button {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 0.5rem;
+}
+
+.calculate-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--shadow);
+  background: var(--accent-hover);
+}
+
+.label-with-value {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.distance-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.slider-container {
+  margin-bottom: 1rem;
+}
+
+.distance-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: var(--border-color);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-bottom: 0.5rem;
+}
+
+.distance-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.distance-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 8px rgba(255, 107, 53, 0.1);
+}
+
+.distance-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+}
+
+.distance-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 8px rgba(255, 107, 53, 0.1);
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  padding: 0 2px;
+}
+
+.result {
+  background: var(--bg-secondary);
+  border: 2px solid var(--accent-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.result h4 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.price-breakdown {
+  background: var(--bg-primary);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+}
+
+.breakdown-item.total {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.breakdown-label {
+  color: var(--text-secondary);
+}
+
+.breakdown-value {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.breakdown-item.total .breakdown-value {
+  color: var(--accent-color);
+}
+
+.breakdown-divider {
+  height: 2px;
+  background: var(--border-color);
+  margin: 0.75rem 0;
+}
+
+.result.error {
+  border-color: #ef4444;
+}
+
+.error-message {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.result h4 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.result-price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin: 1rem 0;
+}
+
+.result-formula {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.late-hours-notice {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.pricing-breakdown {
+  text-align: left;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.pricing-breakdown p {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.pricing-breakdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.pricing-breakdown li {
+  color: var(--text-secondary);
+  padding: 0.25rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.pricing-breakdown li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+.calculator-info {
+  background: var(--bg-secondary);
+  border-left: 4px solid var(--accent-color);
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin-top: 2rem;
+}
+
+.calculator-info h4 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.calculator-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.calculator-info li {
+  color: var(--text-secondary);
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.calculator-info li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* New Sections Styles */
+.time-slot-section {
+  margin-bottom: 2rem;
+}
+
+.time-slot-section h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.fixed-pricing-content {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.distance-pricing-content {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Distance Ranges for Other location */
+.distance-ranges {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.range-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-secondary);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s;
+}
+
+.range-item:hover {
+  border-color: var(--accent-color);
+  transform: translateX(5px);
+}
+
+.range-item.alternative {
+  border: 2px dashed var(--accent-color);
+  background: rgba(255, 107, 53, 0.05);
+}
+
+.range-item .range {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.range-item .rate {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* Weekend Section */
+.weekend-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border-color);
+}
+
+.weekend-section h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.fuel-rates {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.fuel-rates li {
+  padding: 0.5rem 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Garage Services Section */
+.garage-services-section {
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.garage-services-section h3 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.garage-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.garage-note {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.garage-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.garage-features li {
+  padding: 0.4rem 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .pricing {
+    padding: 2rem 1rem;
+  }
+
+  .location-tabs {
+    gap: 0.5rem;
+  }
+
+  .location-tab {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .type-tab {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .fixed-pricing-content,
+  .distance-pricing-content {
+    padding: 1.5rem;
+  }
+  
+  .pricing-section {
+    padding: 1.5rem;
+  }
+  
+  .price-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .calculator {
+    padding: 1.5rem;
+  }
+  
+  .result-price {
+    font-size: 2.5rem;
+  }
+
+  .range-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .garage-services-section {
+    padding: 1.5rem;
