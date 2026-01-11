@@ -163,40 +163,36 @@
       "answer": "Sest osade vahetus ilma põhjusest arusaamata toob sageli kaasa tarbetuid kulusid. Diagnostika võimaldab õigeid otsuseid."
     },
     "q3": {
-      "question": "Miks hinnad sõltuvad piirkonnast ja ajast?",
-      "answer": "Sest sõiduaeg Tallinnas varieerub märkimisväärselt liiklustingimuste tõttu. Hinnad kajastavad kulutatud aega, mitte ainult vahemaad."
-    },
-    "q4": {
       "question": "Miks hiline õhtu on kallim?",
       "answer": "Kella 21:00 kuni 23:00 kehtib hiliste tundide tariif piiratud kättesaadavuse ja pikendatud tööaja tõttu."
     },
-    "q5": {
+    "q4": {
       "question": "Mis juhtub, kui te saabute ja ei saa aidata?",
       "answer": "Kui diagnostikat ega abi ei saa pakkuda, tagastatakse 50% ettemaks täielikult."
     },
-    "q6": {
+    "q5": {
       "question": "Miks on ettemaks nõutud?",
       "answer": "Ettemaks tagab ajavahemiku ja katab sõiduaja. See hoiab ära viimase hetke tühistamised."
     },
-    "q7": {
+    "q6": {
       "question": "Kas diagnostika annab alati täpse vastuse?",
       "answer": "Diagnostika annab suuna ja prioriteedid. Mõned mehaanilised probleemid võivad siiski vajada töökoja ülevaatust."
     },
-    "q8": {
+    "q7": {
       "question": "Kas saate kustutada veakoode?",
       "answer": "Jah, saame kustutada veakoode pärast diagnostikat."
     },
-    "q9": {
+    "q8": {
       "question": "Miks võib remont võtta kauem kui teistes töökodades?",
       "answer": "HealthGarage ei ole mahukäive teenus. Me eelistame hoolikat diagnostikale põhinevat tööd kiirusele."
     },
-    "q10": {
+    "q9": {
       "question": "Kas saate teha kiireloomulist või sama päeva remonti?",
       "answer": "Ei. Me ei paku hädaabi ega kiirustatud remonti. Kui sõidukit on kiireloomuliselt vaja, soovitame suuremat töökoda."
     },
-    "q11": {
+    "q10": {
       "question": "Milliste autodega te töötate?",
-      "answer": "Enamik Euroopa sõidukeid on diagnostika jaoks toetatud. Kiire hooldus on piiratud BMW, Mercedes-Benz ja VAG sõidukitega (Audi, VW, Škoda, SEAT)."
+      "answer": "Enamik sõidukeid on diagnostika jaoks toetatud. Kiire hooldus on piiratud BMW, Mercedes-Benz ja VAG sõidukitega."
     }
   },
   "booking": {
