@@ -14,9 +14,9 @@ const Footer = () => {
           
           <div className="footer-section">
             <h4>Contact</h4>
-            <p><FontAwesomeIcon icon={faMobileScreen} /> Book via Telegram</p>
-            <p>📍 Garage: Kehra, Estonia</p>
-            <p>🕐 Evening service: 18:00 – 23:00</p>
+            <p><FontAwesomeIcon icon={faMobileScreen} /> <a href="https://t.me/healthgarageofficial" target="_blank" rel="noopener noreferrer" style={{color: 'inherit'}}>Telegram</a></p>
+            <p><FontAwesomeIcon icon={faLocationDot} /> Garage: Kehra, Estonia</p>
+            <p><FontAwesomeIcon icon={faClock} /> Evening service: 18:00 – 23:00</p>
           </div>
           
           <div className="footer-section">

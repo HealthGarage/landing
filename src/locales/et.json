@@ -37,7 +37,7 @@
       "onsite": "Töökoja teenused",
       "mobile": "Väljasõiduga"
     },
-    "onsiteExplanation": "Te toote auto meie töökotta (Kehra või Maardu)",
+    "onsiteExplanation": "Te toote auto meie töökotta (Kehra või Maardu). Remont ja kiire hooldus on ainult Kehras",
     "mobileExplanation": "Me tuleme teie juurde professionaalse varustusega",
     "locations": {
       "kehra": "Kehra",
@@ -67,7 +67,7 @@
         ]
       },
       "coding": {
-        "title": "Adaptatsioon ja Kodeerimine",
+        "title": "Adaptatsioon ja Kodeerimine (elektroonika seadistamine)",
         "features": [
           "Ainult VAG autod",
           "Long coding, adaptatsioonid",
@@ -112,7 +112,7 @@
         ]
       },
       "coding": {
-        "title": "Adaptatsioon ja Kodeerimine",
+        "title": "Adaptatsioon ja Kodeerimine (elektroonika seadistamine)",
         "features": [
           "Ainult VAG autod",
           "Tehakse koos diagnostikaga",
@@ -127,7 +127,8 @@
       "alternative": "Alternatiivne",      "selectRegion": "Väljasõidu tingimus:",
       "generalRegion": "Tavalised",
       "tallinnRegion": "Tipptund",
-      "rushHourNote": "Tipptund: 18:00 kuni 18:45 Tallinnas ja Maardus (0.7 € / km). Muul ajal ja teistes kohtades kehtivad tavalised hinnad.",      "selectService": "Valige teenus:",
+      "rushHourNote": "Tipptund: 18:00 kuni 18:45 Tallinnas ja Maardus (0.7 € / km).",
+      "selectService": "Valige teenus:",
       "basicDiag": "Tavaline Diagnostika",
       "fullDiag": "Täielik Diagnostika",
       "coding": "Kodeerimine",
@@ -288,6 +289,84 @@
     "agreement": "Meiega ühendust võttes nõustute meie makse- ja tagastamispoliitikaga",
     "bookViaTelegram": "Broneeri Telegrami Kaudu",
     "callDirectly": "Helista Otse"
+  },
+  "quickPricing": {
+    "title": "Kiire Hinnaülevaade",
+    "subtitle": "Lihtne hinnakujundus — vali mida vajad",
+    "popular": "Populaarne",
+    "onsite": {
+      "title": "Töökoja teenused",
+      "price": "alates 25€",
+      "description": "Sa tood auto Kehrasse või Maardusse",
+      "feature1": "Diagnostika alates 25€",
+      "feature2": "Remont alates 30€/tund",
+      "feature3": "Kodeerimine alates 60€/tund"
+    },
+    "mobile": {
+      "title": "Väljasõiduga",
+      "price": "alates 30€ + km",
+      "description": "Me tuleme sinu juurde varustusega",
+      "feature1": "Diagnostika alates 30€",
+      "feature2": "Läbisõit 0.5€/km",
+      "feature3": "Töötame õhtul 18:00-23:00"
+    },
+    "urgent": {
+      "title": "Õhtu/Nädalavahetus",
+      "price": "x2 tariif",
+      "description": "Kõrgendatud tariifid pärast 21:00 ja nädalavahetustel",
+      "feature1": "Pärast 21:00: tariif x2",
+      "feature2": "Nädalavahetus: tariif x2",
+      "feature3": "Väljaspool linna: tariif x2.5"
+    },
+    "examples": {
+      "title": "Arvutuse Näited",
+      "tallinn": "Diagnostika Tallinnas (20 km)",
+      "tallinnPrice": "30€ + 10€ = 40€",
+      "maardu": "Diagnostika Maardus (15 km)",
+      "maarduPrice": "30€ + 7.5€ = 37.5€",
+      "kehra": "Diagnostika töökodades",
+      "kehraPrice": "25€"
+    },
+    "detailedCalculator": "Täpne Kalkulaator →"
+  },
+  "whatWeDoNot": {
+    "title": "Mida Me EI Tee",
+    "subtitle": "Oluline teada meie piiranguid enne broneerimist",
+    "item1": "Ei tee kiireloomulisi või kiireid remonditöid",
+    "item2": "Ei paku pukseerimisteenust",
+    "item3": "Ei tee kerehooldust ega värvimist",
+    "item4": "Ei paranda rehve ega velgesid",
+    "item6": "Ei tee tööd ilma eelneva diagnostikata",
+    "note": "Kui vajad kiiret abi või suurt töökoda — soovitame pöörduda spetsialiseeritud teenuse poole"
+  },
+  "testimonials": {
+    "title": "Meie Tööde Näited",
+    "subtitle": "Reaalsed juhtumid: mida leidsime ja mida soovitasime",
+    "problem": "Probleem",
+    "found": "Mida leidsime",
+    "outcome": "Tulemus",
+    "case1": {
+      "name": "VW Passat B6 2008",
+      "issue": "Põleb Check Engine, käigud hüppavad tühikäigul",
+      "found": "Õhuleke läbi rebenenud torusülituse pärast õhumassiandurit. Koodid P0171, P0174 (vaene segu)",
+      "outcome": "Klient vahetas torusülituse ise 15€ eest. Vead ei tule tagasi. Säästu asjatu õhupuhastusest."
+    },
+    "case2": {
+      "name": "BMW E90 2007",
+      "issue": "ABS süttib perioodiliselt, mõnikord ei tööta",
+      "found": "Vigane ratta kiirusandur (tagumine parem). Signaal kaob perioodiliselt",
+      "outcome": "Soovitasime andurit vahetada spetsialiseeritud teenuses. Klient teadis täpset põhjust ega maksnud üle diagnoosimise eest seal."
+    },
+    "case3": {
+      "name": "Audi A4 B8 2011",
+      "issue": "Soovib aktiveerida cruise control'i kodeerimise kaudu",
+      "found": "Autol on vajalik varustus. Tegime aktiveerimise VCDS kaudu",
+      "outcome": "Cruise control töötab. Klient sai funktsiooni ilma uue roolita. Maksumus: 1 tund kodeerimist."
+    }
+  },
+  "floatingContact": {
+    "call": "Helista",
+    "telegram": "Telegram"
   },
   "footer": {
     "title": "HealthGarage",

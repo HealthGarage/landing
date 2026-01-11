@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCar, faCalendarDays, faClipboard, faLocationDot, faMobileScreen, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faCar, faCalendarDays, faClipboard, faLocationDot, faMobileScreen, faPhone, faComments, faCircleCheck, faMoneyBill, faWrench } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../context/LanguageContext';
 import './Booking.css';
 
@@ -36,30 +36,41 @@ const Booking = () => {
 
           <div className="booking-process">
             <h3>{t('booking.howItWorks')}</h3>
-            <div className="process-steps">
-              <div className="step">
-                <div className="step-number">1</div>
+            <div className="process-timeline">
+              <div className="timeline-step">
+                <div className="step-icon">
+                  <FontAwesomeIcon icon={faComments} />
+                </div>
+                <div className="step-line"></div>
                 <div className="step-content">
                   <h4>{t('booking.steps.contact.title')}</h4>
                   <p>{t('booking.steps.contact.description')}</p>
                 </div>
               </div>
-              <div className="step">
-                <div className="step-number">2</div>
+              <div className="timeline-step">
+                <div className="step-icon">
+                  <FontAwesomeIcon icon={faCircleCheck} />
+                </div>
+                <div className="step-line"></div>
                 <div className="step-content">
                   <h4>{t('booking.steps.confirm.title')}</h4>
                   <p>{t('booking.steps.confirm.description')}</p>
                 </div>
               </div>
-              <div className="step">
-                <div className="step-number">3</div>
+              <div className="timeline-step">
+                <div className="step-icon">
+                  <FontAwesomeIcon icon={faMoneyBill} />
+                </div>
+                <div className="step-line"></div>
                 <div className="step-content">
                   <h4>{t('booking.steps.advance.title')}</h4>
                   <p>{t('booking.steps.advance.description')}</p>
                 </div>
               </div>
-              <div className="step">
-                <div className="step-number">4</div>
+              <div className="timeline-step">
+                <div className="step-icon">
+                  <FontAwesomeIcon icon={faWrench} />
+                </div>
                 <div className="step-content">
                   <h4>{t('booking.steps.service.title')}</h4>
                   <p>{t('booking.steps.service.description')}</p>

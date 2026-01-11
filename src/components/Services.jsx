@@ -207,7 +207,7 @@ const Services = () => {
               {t('services.calculator.tallinnRegion')}
             </button>
           </div>
-          {pricingModel === 'standard' && (
+          {pricingModel === 'standard' && region === 'tallinn' && (
             <p className="rush-hour-note">{t('services.calculator.rushHourNote')}</p>
           )}
         </div>
