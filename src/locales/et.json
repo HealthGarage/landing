@@ -29,64 +29,116 @@
     }
   },
   "services": {
-    "title": "Meie Teenused",
-    "subtitle": "Teenused sõltuvalt piirkonnast",
-    "regions": {
+    "title": "Teenused ja Hinnad",
+    "subtitle": "Professionaalsed teenused teie autole",
+    "hour": "tund",
+    "kilometrage": "läbisõit",
+    "types": {
+      "onsite": "Töökoja teenused",
+      "mobile": "Väljasõiduga"
+    },
+    "onsiteExplanation": "Te toote auto meie töökotta (Kehra või Maardu)",
+    "mobileExplanation": "Me tuleme teie juurde professionaalse varustusega",
+    "locations": {
       "kehra": "Kehra",
-      "other": "Teised Linnad"
+      "maardu": "Maardu"
     },
-    "basicDiagnostic": {
-      "title": "Põhidiagnostika",
-      "description": "Kiire auto kontroll arusaadavate selgitustega.",
-      "features": [
-        "Veakoodide lugemine",
-        "Probleemide selgitamine lihtsas keeles",
-        "Remondi prioriteet: mis on kiire, mis võib oodata",
-        "Veakoodide kustutamine (kui ohutu)"
-      ]
+    "viewTabs": {
+      "services": "Teenused",
+      "calculator": "Kalkulaator"
     },
-    "fullDiagnostic": {
-      "title": "Täielik Süsteemidiagnostika",
-      "description": "Põhjalik kõigi autosüsteemide skaneerimine koos üksikasjaliku aruandega.",
-      "features": [
-        "Kõigi autosüsteemide skaneerimine",
-        "Mootori, käigukasti, ABS, turvapadi kontroll",
-        "Üksikasjalik seisuaruanne",
-        "Selged remondisoovitused"
-      ]
+    "onsite": {
+      "basicDiagnostic": {
+        "title": "Tavaline Diagnostika",
+        "features": [
+          "Veakoodide lugemine",
+          "Probleemide selgitamine",
+          "Remondi prioriteet",
+          "Veakoodide kustutamine (kui ohutu)"
+        ]
+      },
+      "fullDiagnostic": {
+        "title": "Täielik Diagnostika",
+        "features": [
+          "Kõigi süsteemide skaneerimine",
+          "Mootori, käigukasti, ABS kontroll",
+          "Üksikasjalik aruanne",
+          "Remondisoovitused"
+        ]
+      },
+      "coding": {
+        "title": "Adaptatsioon ja Kodeerimine",
+        "features": [
+          "Ainult VAG autod",
+          "Long coding, adaptatsioonid",
+          "Töökindluse kontroll",
+          "Makse ainult töö aja eest"
+        ]
+      },
+      "repair": {
+        "title": "Remonditööd",
+        "features": [
+          "Ainult pärast diagnostikat",
+          "Mittekiireloomulised tööd",
+          "Kvaliteet üle kiiruse",
+          "Ausad hinnad"
+        ]
+      },
+      "maintenance": {
+        "title": "Kiire Hooldus",
+        "features": [
+          "Õli ja filtrite vahetus",
+          "BMW, Mercedes, VAG",
+          "Kiire teostus",
+          "Kvaliteetsed materjalid"
+        ]
+      }
     },
-    "software": {
-      "title": "Tarkvaratöökoda",
-      "description": "Adaptatsioonid, kodeerimine ja lähtestused VAG sõidukitele ja teistele.",
-      "features": [
-        "VAG grupi spetsialist (Audi, VW, Škoda, SEAT)",
-        "Teised margid — kokkuleppel",
-        "30 € / tund",
-        "Arvestus 15-minutiliste intervallidega"
-      ]
+    "mobile": {
+      "basicDiagnostic": {
+        "title": "Tavaline Diagnostika",
+        "features": [
+          "Läbisõit sõltub kaugusest",
+          "Veakoodide lugemine",
+          "Probleemide selgitamine"
+        ]
+      },
+      "fullDiagnostic": {
+        "title": "Täielik Diagnostika",
+        "features": [
+          "Läbisõit sõltub kaugusest",
+          "Kõik auto süsteemid",
+          "Üksikasjalik aruanne"
+        ]
+      },
+      "coding": {
+        "title": "Adaptatsioon ja Kodeerimine",
+        "features": [
+          "Ainult VAG autod",
+          "Tehakse koos diagnostikaga",
+          "Töökindluse kontroll kaasas"
+        ]
+      }
     },
-    "repair": {
-      "title": "Remonditööd",
-      "description": "Diagnostikapõhised remondid meie garaazhis mittekiireloomuliste tööde jaoks.",
-      "features": [
-        "Ainult pärast diagnostikat",
-        "35 € / tund",
-        "Mittekiireloomulised tööd",
-        "Kvaliteet üle kiiruse"
-      ]
-    },
-    "maintenance": {
-      "title": "Hooldus (Kiirteenus)",
-      "description": "Õlivahetused, filtrid ja põhihooldus valitud kaubamärkidele.",
-      "features": [
-        "Õli ja filtrite vahetus",
-        "BMW, Mercedes, VAG",
-        "20 € / tund",
-        "Tüüpiline kestus 1-2 tundi"
-      ]
-    },
-    "whyTitle": "Miks HealthGarage?",
-    "whyDescription": "Enamik autoomanikke lähevad töökotta teadmata tegelikku probleemi. See viib sageli ebavajalike remontideni, aja raiskamiseni ja kõrgemate kuludeni. HealthGarage toimib diagnostika-esmasena teenusena — andes teile selgust, prioriteete ja realistlikke järgmisi samme enne raha kulutamist."
+    "calculator": {
+      "title": "Mobiilse Teenuse Kalkulaator",
+      "description": "Arvutage mobiilse teenuse maksumus sõltuvalt kaugusest",
+      "standard": "Standardne",
+      "alternative": "Alternatiivne",      "selectRegion": "Väljasõidu tingimus:",
+      "generalRegion": "Tavalised",
+      "tallinnRegion": "Tipptund",
+      "rushHourNote": "Tipptund: 18:00 kuni 18:45 Tallinnas ja Maardus (0.7 € / km). Muul ajal ja teistes kohtades kehtivad tavalised hinnad.",      "selectService": "Valige teenus:",
+      "basicDiag": "Tavaline Diagnostika",
+      "fullDiag": "Täielik Diagnostika",
+      "coding": "Kodeerimine",
+      "distance": "Kaugus",
+      "priceBreakdown": "Hinna arvutus:",
+      "serviceFee": "Teenus",
+      "distanceFee": "Läbisõit",
+      "total": "Kokku",
+      "alternativeNote": "Alternatiivses mudelis on teenus tasuta, kuid kilomeetri hind on kõrgem",
+      "alternativeRestriction": "Alternatiivne mudel: miinimum 30 km. Ei kehti Maardus ja Tallinnas."
+    }
   },
   "serviceArea": {
     "title": "Teeninduspiirkond",
@@ -110,71 +162,29 @@
   },
   "pricing": {
     "title": "Hinnad",
-    "subtitle": "Läbipaistev hinnakujundus aja ja vahemaa põhjal",
-    "locations": {
-      "tallinn": "Tallinn",
-      "maardu": "Maardu",
-      "kehra": "Kehra",
-      "other": "Muu"
-    },
-    "chooseTypeInfo": "Valige mugav variant: fikseeritud hind (lihtne ja selge) või kauguse järgi (täpne hind)",
-    "basicDiagnostic": "Tavaline Diagnostika",
-    "fullDiagnostic": "Täielik Diagnostika",
-    "fixedPrice": "Fikseeritud Hind",
-    "distancePrice": "Vahemaa Järgi",
-    "mobileToYou": "Me tuleme teie juurde",
-    "bringToUs": "Te toote meile",
-    "youBringTo": "Te toote",
-    "weComeTo": "Me tuleme",
-    "customerBringsCar": "Klient Toob Auto",
-    "mobileService": "Mobiilne Teenus",
-    "fuelPricing": "kilomeetrite järgi",
-    "allDistricts": "Kõik linnaosad",
-    "tariffApplies": "tariif kehtib",
-    "outsideTallinnMaardu": "Väljaspool Tallinna ja Maardut",
-    "alternative": "alternatiiv",
-    "diagnosticsIncluded": "diagnostika sisaldub",
-    "diagnostics": "diagnostika",
-    "calculatorTab": "Vahemaa Kalkulaator",
-    "calculatorTitle": "Arvuta Oma Hind",
-    "calculatorDescription": "Reguleerige liugurit vahemaa määramiseks ja valige ajavahemik mobiilse teenuse hinna arvutamiseks.",
-    "distance": "Vahemaa",
-    "km": "km",
+    "subtitle": "Läbipaistev hinnakujundus kõigile teenustele",
     "hour": "tund",
-    "timeSlot": "Ajavahemik",
-    "diagnosticsFee": "Diagnostika Tasu",
-    "pricePerKm": "Hind km kohta",
-    "totalPrice": "Koguhind",
-    "estimatedPrice": "Hinnanguline Hind",
-    "lateHoursNotice": "Hilistunni tariif (2×) rakendatud",
-    "importantInfo": "Oluline Informatsioon",
-    "infoItem1": "Hinnad kajastavad tegelikku sõiduaega ja liiklusolukorda",
-    "infoItem2": "Broneeringu kinnitamiseks on vajalik 50% ettemaks",
-    "infoItem3": "Ülejäänud 50% makstakse kohapeal spetsialisti saabumisel",
-    "infoItem4": "Täielik tagastamine, kui diagnostikat ei saa teha",
-    "weekends": "Nädalavahetused ja Pühad",
-    "weekendsAndHolidays": "Nädalavahetused ja Pühad",
-    "constantPrice": "Konstantne hind kõigi diagnostika tüüpide jaoks",
-    "garageServices": "Garaaži Teenused (Kehra)",
-    "garageNote": "Ainult pärast diagnostikat. Mittekiireloomuliste tööde jaoks paindliku ajaga.",
-    "garage": {
-      "software": {
-        "title": "Tarkvaratöökoda",
-        "description": "Adaptatsioonid, kodeerimine, lähtestused (VAG ja teised)"
-      },
-      "repair": {
-        "title": "Remonditööd",
-        "description": "Pärast diagnostikat, mittekiireloomulised remondid"
-      },
-      "maintenance": {
-        "title": "Hooldus (Kiirteenus)",
-        "description": "Õli, filtrid, põhihooldus (BMW, Mercedes, VAG)"
-      }
+    "useCalculator": "Kasuta Kalkulaatorit",
+    "onsite": {
+      "title": "Kohapealse Teenused",
+      "description": "Te toote auto meie töökotta",
+      "kehra": "Kehra",
+      "maardu": "Maardu",
+      "kehraRepair": "Remonditööd",
+      "kehraMaintenance": "Kiire hooldus",
+      "basicDiag": "Tavaline diagnostika",
+      "fullDiag": "Täielik diagnostika",
+      "coding": "Adaptatsioon ja kodeerimine"
     },
-    "timeSlots": {
-      "peak": "18:00 – 19:00 (Tipptund)",
-      "reduced": "19:00 – 21:00 (Vähenenud Liiklus)",
-      "late": "21:00 – 23:00 (Hilistunnid - 2× tariif)"
+    "mobile": {
+      "title": "Mobiilsed Teenused",
+      "description": "Me tuleme teie juurde professionaalse varustusega",
+      "basicDiag": "Tavaline diagnostika",
+      "fullDiag": "Täielik diagnostika",
+      "coding": "Adaptatsioon ja kodeerimine",
+      "distanceRates": "Kauguse tariifid:",
+      "alternativeTitle": "Alternatiivne mudel:",
+      "alternativeDescription": "Diagnostika tasuta, makstakse ainult läbisõidu eest"
     }
   },
   "importantInfo": {
