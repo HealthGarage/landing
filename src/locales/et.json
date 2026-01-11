@@ -4,7 +4,6 @@
     "subtitle": "Keeping your car safe",
     "aboutUs": "Meist",
     "services": "Teenused",
-    "pricing": "Hinnad",
     "faq": "KKK",
     "bookNow": "Broneeri"
   },
@@ -12,9 +11,6 @@
     "title": "Ole teadlik oma auto veast",
     "titleAccent": "Enne maksmist",
     "subtitle": "Diagnostika sinu kodus või meie töökojast. Ausad vastused, ilma ebavajalike teenusteta. Broneeri ja tea oma auto tegelikku seisundit.",
-    "diagnosticsFirst": "Diagnostika esmalt",
-    "mobileService": "Mobiilne teenus",
-    "hours": "18:00 – 23:00",
     "ctaButton": "Broneeri Diagnostika"
   },
   "aboutUs": {
@@ -33,13 +29,6 @@
         "title": "Diagnostika enne remonti",
         "description": "Esmalt täielik diagnostika, siis teadlik valik. Te teate, mille eest maksate."
       }
-    },
-    "reasons": {
-      "noTime": "Pole aega töökoja külastamiseks",
-      "unsafeToDrive": "Pole kindel, kas autoga on ohutu sõita",
-      "avoidUnnecessary": "Soovite vältida ebavajalikke remonditöid",
-      "honestAdvice": "Otsite ausaid, sõltumatuid nõuandeid",
-      "clearUnderstanding": "Vajate selget arusaamist enne remonti"
     }
   },
   "services": {
@@ -154,26 +143,6 @@
       "alternativeRestriction": "Alternatiivne mudel: miinimum 30 km. Ei kehti Maardus ja Tallinnas."
     }
   },
-  "serviceArea": {
-    "title": "Teeninduspiirkond",
-    "subtitle": "Töötame Tallinnas, Maardus, Kehras ja kaugemal",
-    "tallinn": {
-      "title": "🏙️ Tallinn",
-      "description": "Kõik linnaosad, õhtune teenus 18:00 – 23:00"
-    },
-    "maardu": {
-      "title": "🏘️ Maardu",
-      "description": "Mobiilne diagnostika saadaval"
-    },
-    "kehra": {
-      "title": "🏭 Kehra",
-      "description": "Meie garaazh remontide ja hoolduse jaoks"
-    },
-    "outside": {
-      "title": "🚗 Väljaspool (100+ km)",
-      "description": "Saadaval kokkuleppel"
-    }
-  },
   "importantInfo": {
     "title": "Oluline informatsioon",
     "diagnosticsGuidance": "Diagnostika annab suuna, kuid ei garanteeri remonditulemusi",
@@ -275,55 +244,6 @@
     "bookViaTelegram": "Broneeri Telegrami Kaudu",
     "callDirectly": "Helista Otse"
   },
-  "quickPricing": {
-    "title": "Kiire hinnaülevaade",
-    "subtitle": "Lihtne hinnakujundus — vali mida vajad",
-    "popular": "Populaarne",
-    "onsite": {
-      "title": "Töökoja teenused",
-      "price": "alates 25€",
-      "description": "Sa tood auto Kehrasse või Maardusse",
-      "feature1": "Diagnostika alates 25€",
-      "feature2": "Remont alates 30€/tund",
-      "feature3": "Kodeerimine alates 60€/tund"
-    },
-    "mobile": {
-      "title": "Väljasõiduga",
-      "price": "alates 30€ + km",
-      "description": "Me tuleme sinu juurde varustusega",
-      "feature1": "Diagnostika alates 30€",
-      "feature2": "Läbisõit 0.5€/km",
-      "feature3": "Töötame õhtul 18:00-23:00"
-    },
-    "urgent": {
-      "title": "Õhtu/nädalavahetus",
-      "price": "x2 tariif",
-      "description": "Kõrgendatud tariifid pärast 21:00 ja nädalavahetustel",
-      "feature1": "Pärast 21:00: tariif x2",
-      "feature2": "Nädalavahetus: tariif x2",
-      "feature3": "Väljaspool linna: tariif x2.5"
-    },
-    "examples": {
-      "title": "Arvutuse näited",
-      "tallinn": "Diagnostika Tallinnas (20 km)",
-      "tallinnPrice": "30€ + 10€ = 40€",
-      "maardu": "Diagnostika Maardus (15 km)",
-      "maarduPrice": "30€ + 7.5€ = 37.5€",
-      "kehra": "Diagnostika töökodades",
-      "kehraPrice": "25€"
-    },
-    "detailedCalculator": "Täpne Kalkulaator →"
-  },
-  "whatWeDoNot": {
-    "title": "Mida me ei tee",
-    "subtitle": "Oluline teada meie piiranguid enne broneerimist",
-    "item1": "Ei tee kiireloomulisi või kiireid remonditöid",
-    "item2": "Ei paku pukseerimisteenust",
-    "item3": "Ei tee kerehooldust ega värvimist",
-    "item4": "Ei paranda rehve ega velgesid",
-    "item6": "Ei tee tööd ilma eelneva diagnostikata",
-    "note": "Kui vajad kiiret abi või suurt töökoda — soovitame pöörduda spetsialiseeritud teenuse poole"
-  },
   "testimonials": {
     "title": "Meie tööde näited",
     "problem": "Probleem",
@@ -347,10 +267,6 @@
       "found": "Autol on vajalik varustus. Tegime aktiveerimise VCDS kaudu",
       "outcome": "Cruise control töötab. Klient sai funktsiooni ilma uue roolita. Maksumus: 1 tund kodeerimist."
     }
-  },
-  "floatingContact": {
-    "call": "Helista",
-    "telegram": "Telegram"
   },
   "footer": {
     "title": "HealthGarage",
