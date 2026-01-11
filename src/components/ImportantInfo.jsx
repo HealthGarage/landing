@@ -25,7 +25,11 @@ const ImportantInfo = () => {
     },
     {
       icon: faClock,
-      textKey: 'importantInfo.eveningTariffs'
+      textKey: 'importantInfo.nightTariffs'
+    },
+    {
+      icon: faClock,
+      textKey: 'importantInfo.weekendTariffs'
     }
   ];
 

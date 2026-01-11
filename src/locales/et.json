@@ -193,7 +193,8 @@
     "noEmergency": "Kiireloomulisi või hädaolukorras remonditöid ei tehta",
     "errorClearingSafe": "Veakoodide kustutamine ainult siis, kui see on ohutu",
     "pricesConfirmed": "Hinnad kinnitatakse enne saabumist",
-    "eveningTariffs": "Kehtestavad õhtused ja hilistunnid tariifid"
+    "nightTariffs": "Kehtivad kõrgendatud tariifid tööpäevadel kell 21:00 kuni 09:00 Eesti aja järgi: x2 Maardus ja Tallinnas, x2.5 väljaspool",
+    "weekendTariffs": "Kehtivad kõrgendatud tariifid nädalavahetustel ja riigipühadel: x2 Maardus ja Tallinnas, x2.5 väljaspool"
   },
   "faq": {
     "title": "Korduma Kippuvad Küsimused",
