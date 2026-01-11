@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCar, faCalendarDays, faClipboard, faLocationDot, faMobileScreen, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../context/LanguageContext';
 import './Booking.css';
 
@@ -15,19 +17,19 @@ const Booking = () => {
           
           <div className="booking-requirements">
             <div className="requirement">
-              <span className="requirement-icon">🚗</span>
+              <span className="requirement-icon"><FontAwesomeIcon icon={faCar} /></span>
               <span>{t('booking.requirements.carModel')}</span>
             </div>
             <div className="requirement">
-              <span className="requirement-icon">📅</span>
+              <span className="requirement-icon"><FontAwesomeIcon icon={faCalendarDays} /></span>
               <span>{t('booking.requirements.year')}</span>
             </div>
             <div className="requirement">
-              <span className="requirement-icon">📝</span>
+              <span className="requirement-icon"><FontAwesomeIcon icon={faClipboard} /></span>
               <span>{t('booking.requirements.issue')}</span>
             </div>
             <div className="requirement">
-              <span className="requirement-icon">📍</span>
+              <span className="requirement-icon"><FontAwesomeIcon icon={faLocationDot} /></span>
               <span>{t('booking.requirements.location')}</span>
             </div>
           </div>
@@ -95,19 +97,19 @@ const Booking = () => {
 
           <div className="contact-buttons">
             <a 
-              href="https://t.me/yourusername" 
+              href="https://t.me/healthgarageofficial" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="contact-button telegram"
             >
-              <span className="button-icon">📱</span>
+              <span className="button-icon"><FontAwesomeIcon icon={faMobileScreen} /></span>
               {t('booking.bookViaTelegram')}
             </a>
             <a 
-              href="tel:+372XXXXXXXX" 
+              href="tel:+37256865405" 
               className="contact-button phone"
             >
-              <span className="button-icon">📞</span>
+              <span className="button-icon"><FontAwesomeIcon icon={faPhone} /></span>
               {t('booking.callDirectly')}
             </a>
           </div>

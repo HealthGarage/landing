@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faClipboardCheck, faScrewdriverWrench, faOilCan, faCode, faCheck, faCalculator } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faClipboardCheck, faScrewdriverWrench, faOilCan, faCode, faCheck, faCalculator, faCircleInfo, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../context/LanguageContext';
 import './Services.css';
 
@@ -289,10 +289,10 @@ const Services = () => {
             {pricingModel === 'alternative' && (
               <div>
                 <p className="alternative-note">
-                  ℹ️ {t('services.calculator.alternativeNote')}
+                  <FontAwesomeIcon icon={faCircleInfo} /> {t('services.calculator.alternativeNote')}
                 </p>
                 <p className="alternative-restriction">
-                  ⚠️ {t('services.calculator.alternativeRestriction')}
+                  <FontAwesomeIcon icon={faTriangleExclamation} /> {t('services.calculator.alternativeRestriction')}
                 </p>
               </div>
             )}

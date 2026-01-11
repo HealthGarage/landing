@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse, faCar } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../context/LanguageContext';
 import './Pricing.css';
 
@@ -19,7 +21,7 @@ const Pricing = () => {
         <div className="pricing-summary">
           {/* On-site Services */}
           <div className="pricing-category">
-            <h3>🏢 {t('pricing.onsite.title')}</h3>
+            <h3><FontAwesomeIcon icon={faHouse} /> {t('pricing.onsite.title')}</h3>
             <p className="category-description">{t('pricing.onsite.description')}</p>
             
             <div className="location-pricing">
@@ -47,7 +49,7 @@ const Pricing = () => {
 
           {/* Mobile Services */}
           <div className="pricing-category">
-            <h3>🚗 {t('pricing.mobile.title')}</h3>
+            <h3><FontAwesomeIcon icon={faCar} /> {t('pricing.mobile.title')}</h3>
             <p className="category-description">{t('pricing.mobile.description')}</p>
             
             <div className="mobile-pricing-grid">

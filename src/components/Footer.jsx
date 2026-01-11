@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMobileScreen, faLocationDot, faClock } from '@fortawesome/free-solid-svg-icons';
 import './Footer.css';
 
 const Footer = () => {
@@ -12,7 +14,7 @@ const Footer = () => {
           
           <div className="footer-section">
             <h4>Contact</h4>
-            <p>📱 Book via Telegram</p>
+            <p><FontAwesomeIcon icon={faMobileScreen} /> Book via Telegram</p>
             <p>📍 Garage: Kehra, Estonia</p>
             <p>🕐 Evening service: 18:00 – 23:00</p>
           </div>
