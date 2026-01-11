@@ -4,7 +4,6 @@ import Hero from './components/Hero'
 import AboutUs from './components/AboutUs'
 import Services from './components/Services'
 import ImportantInfo from './components/ImportantInfo'
-import WhatWeDoNot from './components/WhatWeDoNot'
 import Testimonials from './components/Testimonials'
 import FAQ from './components/FAQ'
 import Booking from './components/Booking'
@@ -18,7 +17,6 @@ function App() {
       <AboutUs />
       <Services />
       <ImportantInfo />
-      <WhatWeDoNot />
       <Testimonials />
       <FAQ />
       <Booking />

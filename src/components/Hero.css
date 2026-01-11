@@ -181,6 +181,10 @@
   .hero-subtitle {
     font-size: 1rem;
   }
+
+  .hero-image {
+    display: none;
+  }
   
   .car-illustration {
     width: 200px;
