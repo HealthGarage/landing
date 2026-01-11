@@ -35,7 +35,6 @@ const Testimonials = () => {
       <div className="testimonials-container">
         <div className="section-header">
           <h2>{t('testimonials.title')}</h2>
-          <p className="subtitle">{t('testimonials.subtitle')}</p>
         </div>
 
         <div className="testimonials-grid">

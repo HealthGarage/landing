@@ -1,7 +1,7 @@
 {
   "header": {
     "title": "HealthGarage",
-    "subtitle": "Мобильная Диагностика",
+    "subtitle": "Keeping your car safe",
     "aboutUs": "О Нас",
     "services": "Услуги",
     "pricing": "Цены",
@@ -342,7 +342,6 @@
   },
   "testimonials": {
     "title": "Примеры Наших Работ",
-    "subtitle": "Реальные случаи: что нашли и что порекомендовали",
     "problem": "Проблема",
     "found": "Что нашли",
     "outcome": "Результат",

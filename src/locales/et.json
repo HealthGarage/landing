@@ -1,7 +1,7 @@
 {
   "header": {
     "title": "HealthGarage",
-    "subtitle": "Mobiilne Diagnostika",
+    "subtitle": "Keeping your car safe",
     "aboutUs": "Meist",
     "services": "Teenused",
     "pricing": "Hinnad",
@@ -341,7 +341,6 @@
   },
   "testimonials": {
     "title": "Meie Tööde Näited",
-    "subtitle": "Reaalsed juhtumid: mida leidsime ja mida soovitasime",
     "problem": "Probleem",
     "found": "Mida leidsime",
     "outcome": "Tulemus",
