@@ -307,7 +307,6 @@ const Services = () => {
       <div className="services-container">
         <div className="section-header">
           <h2>{t('services.title')}</h2>
-          <p>{t('services.subtitle')}</p>
         </div>
 
         {/* Service Type Tabs: On-site vs Mobile */}
@@ -331,11 +330,6 @@ const Services = () => {
             {t('services.types.mobile')}
           </button>
         </div>
-
-        {/* Explanation for selected service type */}
-        <p className="service-type-explanation">
-          {t(activeServiceType === 'onsite' ? 'services.onsiteExplanation' : 'services.mobileExplanation')}
-        </p>
 
         {/* Location Tabs (only for on-site) */}
         {activeServiceType === 'onsite' && (

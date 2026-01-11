@@ -10,16 +10,30 @@
   },
   "hero": {
     "title": "Ole teadlik oma auto veast",
-    "titleAccent": "Enne Maksmist",
-    "subtitle": "Professionaalne auto diagnostika. Me tuleme teie juurde või te toote auto meile. Saate ausad vastused enne remonti.",
-    "diagnosticsFirst": "Diagnostika Esmalt",
-    "mobileService": "Mobiilne Teenus",
+    "titleAccent": "Enne maksmist",
+    "subtitle": "Diagnostika sinu kodus või meie töökojast. Ausad vastused, ilma ebavajalike teenusteta. Broneeri ja tea oma auto tegelikku seisundit.",
+    "diagnosticsFirst": "Diagnostika esmalt",
+    "mobileService": "Mobiilne teenus",
     "hours": "18:00 – 23:00",
     "ctaButton": "Broneeri Diagnostika"
   },
   "aboutUs": {
-    "title": "Miks Valida Meid?",
-    "subtitle": "Spetsialiseerume autodiagnostikale kuni 2021. aasta autodel. Meie meister tuleb teie juurde kõigi seadmetega — pole vaja kuhugi sõita! Töötame ausalt, ilma liigse hinnatõusuta ja alati selgitame, mida teie auto tegelikult vajab.",
+    "title": "Miks valida meid?",
+    "subtitle": "Diagnostika ja remont ilma liigse vaevata. Meie spetsialist tuleb teie juurde kõigi vajalike seadmetega diagnostika ja koodimise jaoks. Tõsise remondi jaoks töötame meie töökojast Kehras. Toetame enamikku autosid kuni 2021. aastani, VAG-autosid kuni 2023. aastani. Eesmärk — ausad nõuanded ilma ebavajalike teenusteta.",
+    "advantages": {
+      "mobile": {
+        "title": "Mobiilne diagnostika",
+        "description": "Meie spetsialist tuleb teie juurde kõigi vajalike seadmetega. Pole vaja autot kuhugi vedada."
+      },
+      "honest": {
+        "title": "Ausad nõuanded",
+        "description": "Me ei paku tarbetuid teenuseid. Töötame ausalt ja selgitame, mida teie auto tegelikult vajab."
+      },
+      "diagnostics": {
+        "title": "Diagnostika enne remonti",
+        "description": "Esmalt täielik diagnostika, siis teadlik valik. Te teate, mille eest maksate."
+      }
+    },
     "reasons": {
       "noTime": "Pole aega töökoja külastamiseks",
       "unsafeToDrive": "Pole kindel, kas autoga on ohutu sõita",
@@ -29,15 +43,13 @@
     }
   },
   "services": {
-    "title": "Teenused ja Hinnad",
-    "subtitle": "Professionaalsed teenused teie autole",
+    "title": "Teenused ja hinnad",
     "hour": "tund",
     "kilometrage": "läbisõit",
     "types": {
       "onsite": "Töökoja teenused",
       "mobile": "Väljasõiduga"
     },
-    "onsiteExplanation": "Te toote auto meie töökotta (Kehra või Maardu). Remont ja kiire hooldus on ainult Kehras",
     "mobileExplanation": "Me tuleme teie juurde professionaalse varustusega",
     "locations": {
       "kehra": "Kehra",
@@ -49,25 +61,24 @@
     },
     "onsite": {
       "basicDiagnostic": {
-        "title": "Tavaline Diagnostika",
+        "title": "Tavaline diagnostika",
         "features": [
           "Veakoodide lugemine",
-          "Probleemide selgitamine",
-          "Remondi prioriteet",
-          "Veakoodide kustutamine (kui ohutu)"
+          "Konsultatsioon",
+          "Veakoodide kustutamine"
         ]
       },
       "fullDiagnostic": {
-        "title": "Täielik Diagnostika",
+        "title": "Täielik diagnostika",
         "features": [
-          "Kõigi süsteemide skaneerimine",
-          "Mootori, käigukasti, ABS kontroll",
+          "Veakoodide lugemine igast mööduli plokist eraldi ja iga bloki analuuš",
           "Üksikasjalik aruanne",
-          "Remondisoovitused"
+          "Konsultatsioon",
+          "Veakoodide kustutamine"
         ]
       },
       "coding": {
-        "title": "Adaptatsioon ja Kodeerimine (elektroonika seadistamine)",
+        "title": "Kodeerimine",
         "features": [
           "Ainult VAG autod",
           "Long coding, adaptatsioonid",
@@ -85,7 +96,7 @@
         ]
       },
       "maintenance": {
-        "title": "Kiire Hooldus",
+        "title": "Kiire hooldus",
         "features": [
           "Õli ja filtrite vahetus",
           "BMW, Mercedes, VAG",
@@ -96,19 +107,20 @@
     },
     "mobile": {
       "basicDiagnostic": {
-        "title": "Tavaline Diagnostika",
+        "title": "Tavaline diagnostika",
         "features": [
-          "Läbisõit sõltub kaugusest",
           "Veakoodide lugemine",
-          "Probleemide selgitamine"
+          "Konsultatsioon",
+          "Veakoodide kustutamine"
         ]
       },
       "fullDiagnostic": {
-        "title": "Täielik Diagnostika",
+        "title": "Täielik diagnostika",
         "features": [
-          "Läbisõit sõltub kaugusest",
-          "Kõik auto süsteemid",
-          "Üksikasjalik aruanne"
+          "Veakoodide lugemine igast mööduli plokist eraldi ja iga bloki analuuš",
+          "Üksikasjalik aruanne",
+          "Konsultatsioon",
+          "Veakoodide kustutamine"
         ]
       },
       "coding": {
@@ -121,10 +133,11 @@
       }
     },
     "calculator": {
-      "title": "Mobiilse Teenuse Kalkulaator",
-      "description": "Arvutage mobiilse teenuse maksumus sõltuvalt kaugusest",
+      "title": "Väljasõidu Teenuse Kalkulaator",
+      "description": "Arvutage väljasõidu teenuse kulu sõltuvalt kaugusest",
       "standard": "Standardne",
-      "alternative": "Alternatiivne",      "selectRegion": "Väljasõidu tingimus:",
+      "alternative": "Alternatiivne",      
+      "selectRegion": "Väljasõidu tingimus:",
       "generalRegion": "Tavalised",
       "tallinnRegion": "Tipptund",
       "rushHourNote": "Tipptund: 18:00 kuni 18:45 Tallinnas ja Maardus (0.7 € / km).",
@@ -161,44 +174,16 @@
       "description": "Saadaval kokkuleppel"
     }
   },
-  "pricing": {
-    "title": "Hinnad",
-    "subtitle": "Läbipaistev hinnakujundus kõigile teenustele",
-    "hour": "tund",
-    "useCalculator": "Kasuta Kalkulaatorit",
-    "onsite": {
-      "title": "Kohapealse Teenused",
-      "description": "Te toote auto meie töökotta",
-      "kehra": "Kehra",
-      "maardu": "Maardu",
-      "kehraRepair": "Remonditööd",
-      "kehraMaintenance": "Kiire hooldus",
-      "basicDiag": "Tavaline diagnostika",
-      "fullDiag": "Täielik diagnostika",
-      "coding": "Adaptatsioon ja kodeerimine"
-    },
-    "mobile": {
-      "title": "Mobiilsed Teenused",
-      "description": "Me tuleme teie juurde professionaalse varustusega",
-      "basicDiag": "Tavaline diagnostika",
-      "fullDiag": "Täielik diagnostika",
-      "coding": "Adaptatsioon ja kodeerimine",
-      "distanceRates": "Kauguse tariifid:",
-      "alternativeTitle": "Alternatiivne mudel:",
-      "alternativeDescription": "Diagnostika tasuta, makstakse ainult läbisõidu eest"
-    }
-  },
   "importantInfo": {
-    "title": "Oluline Informatsioon",
+    "title": "Oluline informatsioon",
     "diagnosticsGuidance": "Diagnostika annab suuna, kuid ei garanteeri remonditulemusi",
     "noEmergency": "Kiireloomulisi või hädaolukorras remonditöid ei tehta",
-    "errorClearingSafe": "Veakoodide kustutamine ainult siis, kui see on ohutu",
     "pricesConfirmed": "Hinnad kinnitatakse enne saabumist",
     "nightTariffs": "Kehtivad kõrgendatud tariifid tööpäevadel kell 21:00 kuni 09:00 Eesti aja järgi: x2 Maardus ja Tallinnas, x2.5 väljaspool",
     "weekendTariffs": "Kehtivad kõrgendatud tariifid nädalavahetustel ja riigipühadel: x2 Maardus ja Tallinnas, x2.5 väljaspool"
   },
   "faq": {
-    "title": "Korduma Kippuvad Küsimused",
+    "title": "Korduma kippuvad küsimused",
     "subtitle": "Kõik, mida peate meie teenuste kohta teadma",
     "q1": {
       "question": "Kas te remondite autosid?",
@@ -230,7 +215,7 @@
     },
     "q8": {
       "question": "Kas saate kustutada veakoode?",
-      "answer": "Jah — ainult kui see on ohutu. Kui vea kustutamine võib varjata tõsist probleemi, selgitatakse seda esmalt."
+      "answer": "Jah, saame kustutada veakoode pärast diagnostikat."
     },
     "q9": {
       "question": "Miks võib remont võtta kauem kui teistes töökodades?",
@@ -246,7 +231,7 @@
     }
   },
   "booking": {
-    "title": "Broneeri Teenus",
+    "title": "Broneeri teenus",
     "description": "Diagnostika või garaaži teenuse broneerimiseks võtke meiega ühendust Telegrami või telefoni teel, esitades järgmise teabe:",
     "requirements": {
       "carModel": "Auto mark ja mudel",
@@ -254,7 +239,7 @@
       "issue": "Probleemi kirjeldus",
       "location": "Teie asukoht"
     },
-    "howItWorks": "Kuidas Broneerimine Toimib",
+    "howItWorks": "Kuidas broneerimine toimib",
     "steps": {
       "contact": {
         "title": "Kontakt",
@@ -291,7 +276,7 @@
     "callDirectly": "Helista Otse"
   },
   "quickPricing": {
-    "title": "Kiire Hinnaülevaade",
+    "title": "Kiire hinnaülevaade",
     "subtitle": "Lihtne hinnakujundus — vali mida vajad",
     "popular": "Populaarne",
     "onsite": {
@@ -311,7 +296,7 @@
       "feature3": "Töötame õhtul 18:00-23:00"
     },
     "urgent": {
-      "title": "Õhtu/Nädalavahetus",
+      "title": "Õhtu/nädalavahetus",
       "price": "x2 tariif",
       "description": "Kõrgendatud tariifid pärast 21:00 ja nädalavahetustel",
       "feature1": "Pärast 21:00: tariif x2",
@@ -319,7 +304,7 @@
       "feature3": "Väljaspool linna: tariif x2.5"
     },
     "examples": {
-      "title": "Arvutuse Näited",
+      "title": "Arvutuse näited",
       "tallinn": "Diagnostika Tallinnas (20 km)",
       "tallinnPrice": "30€ + 10€ = 40€",
       "maardu": "Diagnostika Maardus (15 km)",
@@ -330,7 +315,7 @@
     "detailedCalculator": "Täpne Kalkulaator →"
   },
   "whatWeDoNot": {
-    "title": "Mida Me EI Tee",
+    "title": "Mida me ei tee",
     "subtitle": "Oluline teada meie piiranguid enne broneerimist",
     "item1": "Ei tee kiireloomulisi või kiireid remonditöid",
     "item2": "Ei paku pukseerimisteenust",
@@ -340,7 +325,7 @@
     "note": "Kui vajad kiiret abi või suurt töökoda — soovitame pöörduda spetsialiseeritud teenuse poole"
   },
   "testimonials": {
-    "title": "Meie Tööde Näited",
+    "title": "Meie tööde näited",
     "problem": "Probleem",
     "found": "Mida leidsime",
     "outcome": "Tulemus",

@@ -1,31 +1,26 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faShieldAlt, faWrench, faComments, faClipboardCheck } from '@fortawesome/free-solid-svg-icons';
+import { faShieldAlt, faTruck, faHeartPulse } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../context/LanguageContext';
 import './AboutUs.css';
 
 const AboutUs = () => {
   const { t } = useLanguage();
   
-  const reasons = [
+  const advantages = [
     {
-      icon: faClock,
-      textKey: 'aboutUs.reasons.noTime'
+      icon: faTruck,
+      titleKey: 'aboutUs.advantages.mobile.title',
+      descriptionKey: 'aboutUs.advantages.mobile.description'
     },
     {
       icon: faShieldAlt,
-      textKey: 'aboutUs.reasons.unsafeToDrive'
+      titleKey: 'aboutUs.advantages.honest.title',
+      descriptionKey: 'aboutUs.advantages.honest.description'
     },
     {
-      icon: faWrench,
-      textKey: 'aboutUs.reasons.avoidUnnecessary'
-    },
-    {
-      icon: faComments,
-      textKey: 'aboutUs.reasons.honestAdvice'
-    },
-    {
-      icon: faClipboardCheck,
-      textKey: 'aboutUs.reasons.clearUnderstanding'
+      icon: faHeartPulse,
+      titleKey: 'aboutUs.advantages.diagnostics.title',
+      descriptionKey: 'aboutUs.advantages.diagnostics.description'
     }
   ];
 
@@ -38,13 +33,14 @@ const AboutUs = () => {
         </div>
         
         <div className="about-content">
-          <div className="reasons-grid">
-            {reasons.map((item, index) => (
-              <div key={index} className="reason-item">
-                <div className="reason-icon">
+          <div className="advantages-grid">
+            {advantages.map((item, index) => (
+              <div key={index} className="advantage-card">
+                <div className="advantage-icon">
                   <FontAwesomeIcon icon={item.icon} />
                 </div>
-                <p>{t(item.textKey)}</p>
+                <h3>{t(item.titleKey)}</h3>
+                <p>{t(item.descriptionKey)}</p>
               </div>
             ))}
           </div>
