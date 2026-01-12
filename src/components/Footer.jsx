@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMobileScreen, faLocationDot, faClock } from '@fortawesome/free-solid-svg-icons';
 import './Footer.css';
 
 const Footer = () => {
@@ -5,28 +7,10 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-content">
-          <div className="footer-section">
-            <h3>HealthGarage</h3>
-            <p>Mobile Diagnostics & Independent Garage</p>
+          <div className="footer-section footer-middle">
+            <h4>HealthGarage - Keeping your car safe</h4>
+            <p>(C) 2026</p>
           </div>
-          
-          <div className="footer-section">
-            <h4>Contact</h4>
-            <p>📱 Book via Telegram</p>
-            <p>📍 Garage: Kehra, Estonia</p>
-            <p>🕐 Evening service: 18:00 – 23:00</p>
-          </div>
-          
-          <div className="footer-section">
-            <h4>Service Area</h4>
-            <p>Tallinn and nearby areas</p>
-            <p>Maardu</p>
-            <p>Up to 100km+ by agreement</p>
-          </div>
-        </div>
-        
-        <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} HealthGarage — Diagnostics-First Approach</p>
         </div>
       </div>
     </footer>

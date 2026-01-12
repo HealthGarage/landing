@@ -33,30 +33,31 @@
   gap: 0;
 }
 
-.reasons-grid {
+.advantages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.reason-item {
+.advantage-card {
   background: var(--bg-secondary);
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   border-radius: 12px;
   text-align: center;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 107, 53, 0.1);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.reason-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.2);
+.advantage-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(255, 107, 53, 0.2);
   border-color: var(--accent-color);
 }
 
-.reason-icon {
-  width: 60px;
-  height: 60px;
+.advantage-icon {
+  width: 80px;
+  height: 80px;
   margin: 0 auto 1.5rem;
   display: flex;
   align-items: center;
@@ -64,15 +65,31 @@
   background: linear-gradient(135deg, var(--accent-color), #ff8c42);
   border-radius: 50%;
   color: white;
-  font-size: 1.8rem;
-  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  font-size: 2.5rem;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
-.reason-item p {
+.advantage-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.advantage-card p {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--text-secondary);
   margin: 0;
+}
+
+.reasons-grid {
+  display: none;
+}
+
+.reason-item {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -84,24 +101,22 @@
     font-size: 2rem;
   }
 
-  .why-choose-us h3 {
-    font-size: 1.5rem;
-  }
-
-  .company-description {
-    padding: 1.5rem;
-  }
-
-  .description-text {
-    font-size: 1rem;
-  }
-
-  .reasons-grid {
+  .advantages-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .reason-item {
-    padding: 1.5rem;
+  .advantage-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .advantage-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+
+  .advantage-card h3 {
+    font-size: 1.2rem;
   }
 }

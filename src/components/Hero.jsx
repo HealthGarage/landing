@@ -26,21 +26,6 @@ const Hero = () => {
             {t('hero.subtitle')}
           </p>
           
-          <div className="hero-features">
-            <div className="feature-badge">
-              <FontAwesomeIcon icon={faSearch} className="feature-icon" />
-              <span>{t('hero.diagnosticsFirst')}</span>
-            </div>
-            <div className="feature-badge">
-              <FontAwesomeIcon icon={faCar} className="feature-icon" />
-              <span>{t('hero.mobileService')}</span>
-            </div>
-            <div className="feature-badge">
-              <FontAwesomeIcon icon={faClock} className="feature-icon" />
-              <span>{t('hero.hours')}</span>
-            </div>
-          </div>
-          
           <button onClick={scrollToBooking} className="cta-button">
             {t('hero.ctaButton')}
           </button>

@@ -4,6 +4,8 @@
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-container {
@@ -48,28 +50,11 @@
 }
 
 .hero-features {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
+  display: none;
 }
 
 .feature-badge {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--bg-secondary);
-  padding: 0.75rem 1.25rem;
-  border-radius: 50px;
-  border: 1px solid var(--border-color);
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.feature-icon {
-  font-size: 1.2rem;
-  color: var(--accent-color);
+  display: none;
 }
 
 .cta-button {
@@ -180,6 +165,10 @@
   
   .hero-subtitle {
     font-size: 1rem;
+  }
+
+  .hero-image {
+    display: none;
   }
   
   .car-illustration {

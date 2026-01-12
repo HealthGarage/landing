@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCar, faCalendarDays, faClipboard, faLocationDot, faMobileScreen, faPhone, faComments, faCircleCheck, faMoneyBill, faWrench } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../context/LanguageContext';
 import './Booking.css';
 
@@ -15,49 +17,60 @@ const Booking = () => {
           
           <div className="booking-requirements">
             <div className="requirement">
-              <span className="requirement-icon">🚗</span>
+              <span className="requirement-icon"><FontAwesomeIcon icon={faCar} /></span>
               <span>{t('booking.requirements.carModel')}</span>
             </div>
             <div className="requirement">
-              <span className="requirement-icon">📅</span>
+              <span className="requirement-icon"><FontAwesomeIcon icon={faCalendarDays} /></span>
               <span>{t('booking.requirements.year')}</span>
             </div>
             <div className="requirement">
-              <span className="requirement-icon">📝</span>
+              <span className="requirement-icon"><FontAwesomeIcon icon={faClipboard} /></span>
               <span>{t('booking.requirements.issue')}</span>
             </div>
             <div className="requirement">
-              <span className="requirement-icon">📍</span>
+              <span className="requirement-icon"><FontAwesomeIcon icon={faLocationDot} /></span>
               <span>{t('booking.requirements.location')}</span>
             </div>
           </div>
 
           <div className="booking-process">
             <h3>{t('booking.howItWorks')}</h3>
-            <div className="process-steps">
-              <div className="step">
-                <div className="step-number">1</div>
+            <div className="process-timeline">
+              <div className="timeline-step">
+                <div className="step-icon">
+                  <FontAwesomeIcon icon={faComments} />
+                </div>
+                <div className="step-line"></div>
                 <div className="step-content">
                   <h4>{t('booking.steps.contact.title')}</h4>
                   <p>{t('booking.steps.contact.description')}</p>
                 </div>
               </div>
-              <div className="step">
-                <div className="step-number">2</div>
+              <div className="timeline-step">
+                <div className="step-icon">
+                  <FontAwesomeIcon icon={faCircleCheck} />
+                </div>
+                <div className="step-line"></div>
                 <div className="step-content">
                   <h4>{t('booking.steps.confirm.title')}</h4>
                   <p>{t('booking.steps.confirm.description')}</p>
                 </div>
               </div>
-              <div className="step">
-                <div className="step-number">3</div>
+              <div className="timeline-step">
+                <div className="step-icon">
+                  <FontAwesomeIcon icon={faMoneyBill} />
+                </div>
+                <div className="step-line"></div>
                 <div className="step-content">
                   <h4>{t('booking.steps.advance.title')}</h4>
                   <p>{t('booking.steps.advance.description')}</p>
                 </div>
               </div>
-              <div className="step">
-                <div className="step-number">4</div>
+              <div className="timeline-step">
+                <div className="step-icon">
+                  <FontAwesomeIcon icon={faWrench} />
+                </div>
                 <div className="step-content">
                   <h4>{t('booking.steps.service.title')}</h4>
                   <p>{t('booking.steps.service.description')}</p>
@@ -95,19 +108,19 @@ const Booking = () => {
 
           <div className="contact-buttons">
             <a 
-              href="https://t.me/yourusername" 
+              href="https://t.me/healthgarageofficial" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="contact-button telegram"
             >
-              <span className="button-icon">📱</span>
+              <span className="button-icon"><FontAwesomeIcon icon={faMobileScreen} /></span>
               {t('booking.bookViaTelegram')}
             </a>
             <a 
-              href="tel:+372XXXXXXXX" 
+              href="tel:+37256865405" 
               className="contact-button phone"
             >
-              <span className="button-icon">📞</span>
+              <span className="button-icon"><FontAwesomeIcon icon={faPhone} /></span>
               {t('booking.callDirectly')}
             </a>
           </div>
