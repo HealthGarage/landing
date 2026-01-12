@@ -30,23 +30,18 @@ jobs:
           node-version: '24'
 
       - name: Install dependencies
-        working-directory: ./src
         run: npm install
 
       - name: Build
-        working-directory: ./src
         run: npm run build
-
-      - name: List project root
-        run: ls -la ./src/
-
+  
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './src/dist'
+          path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
