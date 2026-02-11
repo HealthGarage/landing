@@ -103,7 +103,7 @@ const Services = () => {
     // Special pricing for Tallinn 18:00-19:00 (only for standard model)
     if (region === 'tallinn' && pricingModel === 'standard') {
       pricePerKm = 0.7;
-      if (selectedService === 'basic') serviceFee = 30;
+      if (selectedService === 'basic') serviceFee = 25;
       else if (selectedService === 'full') serviceFee = 45;
       else if (selectedService === 'coding') serviceFee = 60;
       total = serviceFee + (dist * pricePerKm);
@@ -111,7 +111,7 @@ const Services = () => {
       // General pricing
       if (pricingModel === 'standard') {
         // Standard: Service fee + distance
-        if (selectedService === 'basic') serviceFee = 30;
+        if (selectedService === 'basic') serviceFee = 25;
         else if (selectedService === 'full') serviceFee = 45;
         else if (selectedService === 'coding') serviceFee = 60; // per hour, but showing base
 
