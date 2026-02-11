@@ -233,10 +233,11 @@
       },
       "refund": {
         "title": "Tagastamispoliitika",
-        "description": "Kui HealthGarage saabub ja ei saa diagnostikat ega abi pakkuda, tagastatakse ettemaks täielikult."
+        "description": "Kui HealthGarage saabub ja ei suuda diagnostikat ega abi pakkuda, tagastatakse 50% viimasest töö eest olevast ettemaksust."
       }
     },
-    "agreement": "Meiega ühendust võttes nõustute meie makse- ja tagastamispoliitikaga",
+    "agreement": "Meiega ühendust võttes nõustute meie makse- ja tagastamispoliitikaga.",
+    "businessInfo": "Teenuseid osutab eraisikust ettevõtja ettevõtluskonto vahendusel.",
     "bookViaTelegram": "Broneeri Telegrami Kaudu",
     "callDirectly": "Helista Otse"
   },

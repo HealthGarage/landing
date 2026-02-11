@@ -104,6 +104,9 @@ const Booking = () => {
             <p className="agreement-text">
               {t('booking.agreement')}
             </p>
+            <p className="business-info">
+              {t('booking.businessInfo')}
+            </p>
           </div>
 
           <div className="contact-buttons">
