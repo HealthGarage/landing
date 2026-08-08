@@ -84,8 +84,8 @@
 
 .car-illustration {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 420px;
+  height: 420px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +99,7 @@
 }
 
 .hero-logo {
-  max-width: 300px;
+  max-width: 420px;
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -153,16 +153,20 @@
     padding: 2rem 1rem;
     min-height: auto;
   }
-  
+
   .hero-container {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
+  .hero-content {
+    text-align: center;
+  }
+
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1rem;
   }
@@ -170,12 +174,12 @@
   .hero-image {
     display: none;
   }
-  
+
   .car-illustration {
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
   }
-  
+
   .car-icon {
     font-size: 5rem;
   }

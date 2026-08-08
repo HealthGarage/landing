@@ -239,6 +239,136 @@
   margin-right: 0.5rem;
 }
 
+/* Supported Cars Link (Coding cards) */
+.supported-cars-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--accent-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.supported-cars-link:hover {
+  color: var(--accent-hover);
+}
+
+/* Supported Cars Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.supported-cars-modal {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: var(--bg-primary-transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalPop 0.2s ease-out;
+}
+
+.supported-cars-modal h3 {
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  padding-right: 2rem;
+}
+
+.supported-cars-modal p {
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.supported-cars-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.supported-cars-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-close:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .supported-cars-modal {
+    padding: 1.5rem;
+  }
+
+  .supported-cars-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .why-section {
   background: var(--bg-secondary);
   border-left: 4px solid var(--accent-color);
@@ -474,11 +604,17 @@
 }
 
 .slider-labels {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  height: 1.2rem;
   margin-top: 0.5rem;
   font-size: 0.85rem;
   color: var(--text-secondary);
+}
+
+.slider-mark {
+  position: absolute;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
 
 .price-result {
@@ -526,13 +662,14 @@
   padding-top: 0.5rem;
 }
 
+.coding-note,
 .alternative-note {
   margin-top: 1rem;
   padding: 1rem;
-  background: rgba(33, 150, 243, 0.1);
-  border-left: 3px solid #2196F3;
+  background: rgba(255, 107, 53, 0.1);
+  border-left: 3px solid var(--accent-color);
   border-radius: 4px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -575,5 +712,13 @@
   
   .service-btn {
     width: 100%;
+  }
+
+  .coding-note,
+  .alternative-note,
+  .alternative-restriction {
+    padding: 0.9rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
   }
 }

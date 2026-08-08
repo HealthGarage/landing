@@ -1,11 +1,40 @@
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCar, faCalendarDays, faClipboard, faLocationDot, faMobileScreen, faPhone, faComments, faCircleCheck, faMoneyBill, faWrench } from '@fortawesome/free-solid-svg-icons';
+import { faCar, faCalendarDays, faClipboard, faLocationDot, faMobileScreen, faPhone, faComments, faCircleCheck, faMoneyBill, faWrench, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../context/LanguageContext';
 import './Booking.css';
 
+// Phone number is assembled at render time (not a plain string literal)
+// so naive scrapers grepping the source/bundle for tel: links or digit
+// sequences won't pick it up, while real visitors still get a working link.
+const PHONE_PARTS = ['+372', '5800', '7331'];
+const getPhoneHref = () => 'tel:' + PHONE_PARTS.join('');
+
 const Booking = () => {
   const { t } = useLanguage();
-  
+  const [isPolicyOpen, setIsPolicyOpen] = useState(false);
+
+  // Close policy modal on Escape key
+  useEffect(() => {
+    if (!isPolicyOpen) return;
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') setIsPolicyOpen(false);
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [isPolicyOpen]);
+
+  const renderPolicySection = (sectionKey) => (
+    <div className="policy-modal-section">
+      <h4>{t(`booking.policyModal.${sectionKey}.title`)}</h4>
+      <ul>
+        {t(`booking.policyModal.${sectionKey}.items`).map((item, idx) => (
+          <li key={idx}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+
   return (
     <section id="booking" className="booking">
       <div className="booking-container">
@@ -79,33 +108,17 @@ const Booking = () => {
             </div>
           </div>
 
-          <div className="policies-section">
-            <div className="policy-box">
-              <h3>{t('booking.policies.payment.title')}</h3>
-              <div className="policy-content">
-                <p>{t('booking.policies.payment.item1')}</p>
-                <p>{t('booking.policies.payment.item2')}</p>
-                <p>{t('booking.policies.payment.item3')}</p>
-                <p>{t('booking.policies.payment.item4')}</p>
-              </div>
-            </div>
-
-            <div className="policy-box refund">
-              <h3>{t('booking.policies.refund.title')}</h3>
-              <div className="policy-content">
-                <p>
-                  {t('booking.policies.refund.description')}
-                </p>
-              </div>
-            </div>
-          </div>
-
           <div className="contact-agreement">
             <p className="agreement-text">
-              {t('booking.agreement')}
-            </p>
-            <p className="business-info">
-              {t('booking.businessInfo')}
+              {t('booking.agreementPrefix')}{' '}
+              <button
+                type="button"
+                className="policy-link"
+                onClick={() => setIsPolicyOpen(true)}
+              >
+                {t('booking.agreementLink')}
+              </button>
+              .
             </p>
           </div>
 
@@ -119,8 +132,8 @@ const Booking = () => {
               <span className="button-icon"><FontAwesomeIcon icon={faMobileScreen} /></span>
               {t('booking.bookViaTelegram')}
             </a>
-            <a 
-              href="tel:+37256865405" 
+            <a
+              href={getPhoneHref()}
               className="contact-button phone"
             >
               <span className="button-icon"><FontAwesomeIcon icon={faPhone} /></span>
@@ -129,6 +142,39 @@ const Booking = () => {
           </div>
         </div>
       </div>
+
+      {isPolicyOpen && (
+        <div
+          className="modal-backdrop"
+          onClick={() => setIsPolicyOpen(false)}
+          role="presentation"
+        >
+          <div
+            className="policy-modal"
+            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="policy-modal-title"
+          >
+            <div className="policy-modal-header">
+              <h3 id="policy-modal-title">{t('booking.policyModal.title')}</h3>
+              <button
+                type="button"
+                className="modal-close"
+                onClick={() => setIsPolicyOpen(false)}
+                aria-label={t('booking.policyModal.close')}
+              >
+                <FontAwesomeIcon icon={faXmark} />
+              </button>
+            </div>
+            <div className="policy-modal-body">
+              {renderPolicySection('company')}
+              {renderPolicySection('payment')}
+              {renderPolicySection('refund')}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

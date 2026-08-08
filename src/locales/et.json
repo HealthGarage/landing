@@ -9,39 +9,46 @@
   },
   "hero": {
     "title": "Ole teadlik oma auto veast",
-    "titleAccent": "Enne maksmist",
-    "subtitle": "Diagnostika sinu kodus või meie töökojast. Ausad vastused, ilma ebavajalike teenusteta. Broneeri ja tea oma auto tegelikku seisundit.",
-    "ctaButton": "Broneeri Diagnostika"
+    "titleAccent": "enne maksmist",
+    "subtitle": "Diagnostika sinu kodus või kohapeal. Ausad vastused, ilma ebavajalike teenusteta. Broneeri ja saa teada oma auto tegelik seisund.",
+    "ctaButton": "Broneeri diagnostika"
   },
   "aboutUs": {
-    "title": "Miks valida meid?",
-    "subtitle": "Diagnostika ja remont ilma liigse vaevata. Meie spetsialist tuleb teie juurde kõigi vajalike seadmetega diagnostika ja koodimise jaoks. Tõsise remondi jaoks töötame meie töökojast Kehras. Toetame enamikku autosid kuni 2021. aastani, VAG-autosid kuni 2023. aastani. Eesmärk — ausad nõuanded ilma ebavajalike teenusteta.",
+    "title": "Meist",
+    "subtitle": "HealthGarage pakub auto mobiilset diagnostikateenust üle kogu Eesti. Meie eesmärk on aidata inimestel tuvastada auto probleeme ja arvutada nende lahendamise ligikaudne hind enne esindusse pöördumist. Diagnostika käigus nõustavad meie spetsialistid teid ja aitavad valida parima lahenduse."
+  },
+  "whyUs": {
+    "title": "Miks meid valida",
+    "subtitle": "Diagnostika ilma liigse vaevata. Toetame enamikku autosid kuni 2021. aastani, VAG-autosid kuni 2023. aastani.",
     "advantages": {
       "mobile": {
         "title": "Mobiilne diagnostika",
         "description": "Meie spetsialist tuleb teie juurde kõigi vajalike seadmetega. Pole vaja autot kuhugi vedada."
       },
-      "honest": {
-        "title": "Ausad nõuanded",
-        "description": "Me ei paku tarbetuid teenuseid. Töötame ausalt ja selgitame, mida teie auto tegelikult vajab."
+      "transparency": {
+        "title": "Läbipaistvad hinnad",
+        "description": "Lepime hinna kokku juba ette ja selgitame, millest see koosneb."
       },
-      "diagnostics": {
-        "title": "Diagnostika enne remonti",
-        "description": "Esmalt täielik diagnostika, siis teadlik valik. Te teate, mille eest maksate."
+      "noSurprises": {
+        "title": "Ilma üllatusteta",
+        "description": "Saate auto remondi ligikaudse hinna teada juba enne autoteenindusse pöördumist ja saate rahulikult otsustada."
+      },
+      "consultation": {
+        "title": "Nõustamine",
+        "description": "Meie eksperdid aitavad teid kõigis autoga seotud küsimustes."
       }
     }
   },
   "services": {
     "title": "Teenused ja hinnad",
     "hour": "tund",
-    "kilometrage": "läbisõit",
+    "kilometrage": "km-tasu",
     "types": {
-      "onsite": "Töökoja teenused",
+      "onsite": "Kohapeal",
       "mobile": "Väljasõiduga"
     },
     "mobileExplanation": "Me tuleme teie juurde professionaalse varustusega",
     "locations": {
-      "kehra": "Kehra",
       "maardu": "Maardu"
     },
     "viewTabs": {
@@ -60,7 +67,8 @@
       "fullDiagnostic": {
         "title": "Täielik diagnostika",
         "features": [
-          "Veakoodide lugemine igast mööduli plokist eraldi ja iga bloki analuuš",
+          "Veakoodide lugemine igast mooduli plokist eraldi",
+          "Iga bloki analüüs",
           "Üksikasjalik aruanne",
           "Konsultatsioon",
           "Veakoodide kustutamine"
@@ -69,20 +77,11 @@
       "coding": {
         "title": "Kodeerimine",
         "features": [
-          "Ainult VAG autod",
           "Long coding, adaptatsioonid",
           "Töökindluse kontroll",
           "Makse ainult töö aja eest"
-        ]
-      },
-      "repair": {
-        "title": "Remonditööd",
-        "features": [
-          "Ainult pärast diagnostikat",
-          "Mittekiireloomulised tööd",
-          "Kvaliteet üle kiiruse",
-          "Ausad hinnad"
-        ]
+        ],
+        "supportedCarsLink": "Toetatud autod"
       },
       "maintenance": {
         "title": "Kiire hooldus",
@@ -106,23 +105,24 @@
       "fullDiagnostic": {
         "title": "Täielik diagnostika",
         "features": [
-          "Veakoodide lugemine igast mööduli plokist eraldi ja iga bloki analuuš",
+          "Veakoodide lugemine igast mooduli plokist eraldi",
+          "Iga bloki analüüs",
           "Üksikasjalik aruanne",
           "Konsultatsioon",
           "Veakoodide kustutamine"
         ]
       },
       "coding": {
-        "title": "Adaptatsioon ja Kodeerimine (elektroonika seadistamine)",
+        "title": "Adaptatsioon ja kodeerimine (elektroonika seadistamine)",
         "features": [
-          "Ainult VAG autod",
           "Tehakse koos diagnostikaga",
           "Töökindluse kontroll kaasas"
-        ]
+        ],
+        "supportedCarsLink": "Toetatud autod"
       }
     },
     "calculator": {
-      "title": "Väljasõidu Teenuse Kalkulaator",
+      "title": "Väljasõidu teenuse kalkulaator",
       "description": "Arvutage väljasõidu teenuse kulu sõltuvalt kaugusest",
       "standard": "Standardne",
       "alternative": "Alternatiivne",      
@@ -131,22 +131,36 @@
       "tallinnRegion": "Tipptund",
       "rushHourNote": "Tipptund: 18:00 kuni 18:45 Tallinnas ja Maardus (0.7 € / km).",
       "selectService": "Valige teenus:",
-      "basicDiag": "Tavaline Diagnostika",
-      "fullDiag": "Täielik Diagnostika",
+      "basicDiag": "Tavaline diagnostika",
+      "fullDiag": "Täielik diagnostika",
       "coding": "Kodeerimine",
       "distance": "Kaugus",
       "priceBreakdown": "Hinna arvutus:",
       "serviceFee": "Teenus",
-      "distanceFee": "Läbisõit",
+      "distanceFee": "km-tasu",
       "total": "Kokku",
       "alternativeNote": "Alternatiivses mudelis on teenus tasuta, kuid kilomeetri hind on kõrgem",
       "alternativeRestriction": "Alternatiivne mudel: miinimum 30 km. Ei kehti Maardus ja Tallinnas."
+    },
+    "supportedCarsModal": {
+      "title": "Kodeerimist toetavad autod",
+      "description": "Kodeerimine on saadaval järgmiste tootjate autodele:",
+      "brands": [
+        "Mercedes-Benz",
+        "BMW",
+        "Volkswagen",
+        "Audi",
+        "Škoda",
+        "SEAT"
+      ],
+      "close": "Sulge"
     }
   },
   "importantInfo": {
     "title": "Oluline informatsioon",
     "diagnosticsGuidance": "Diagnostika annab suuna, kuid ei garanteeri remonditulemusi",
     "noEmergency": "Kiireloomulisi või hädaolukorras remonditöid ei tehta",
+    "errorClearingSafe": "Vigade kustutamine toimub ohutult, autole riski tekitamata",
     "pricesConfirmed": "Hinnad kinnitatakse enne saabumist",
     "nightTariffs": "Kehtivad kõrgendatud tariifid tööpäevadel kell 21:00 kuni 09:00 Eesti aja järgi: x2 Maardus ja Tallinnas, x2.5 väljaspool",
     "weekendTariffs": "Kehtivad kõrgendatud tariifid nädalavahetustel ja riigipühadel: x2 Maardus ja Tallinnas, x2.5 väljaspool"
@@ -156,7 +170,7 @@
     "subtitle": "Kõik, mida peate meie teenuste kohta teadma",
     "q1": {
       "question": "Kas te remondite autosid?",
-      "answer": "Jah. Valitud remondi- ja hooldustööd tehakse meie Kehra garaaZhis. Mobiilne teenus keskendub ainult diagnostikale."
+      "answer": "Osaliselt. Saame teha auto remonti ainult nädalavahetustel iseteeninduse töökodades. Hind on 30 € töötunni eest + 10 € tunnis iseteeninduse töökoja rendi eest."
     },
     "q2": {
       "question": "Miks alustate alati diagnostikast?",
@@ -164,35 +178,31 @@
     },
     "q3": {
       "question": "Miks hiline õhtu on kallim?",
-      "answer": "Kella 21:00 kuni 23:00 kehtib hiliste tundide tariif piiratud kättesaadavuse ja pikendatud tööaja tõttu."
+      "answer": "Kella 21:00 kuni 09:00 kehtib hiliste tundide tariif piiratud kättesaadavuse ja pikendatud tööaja tõttu."
     },
     "q4": {
-      "question": "Mis juhtub, kui te saabute ja ei saa aidata?",
-      "answer": "Kui diagnostikat ega abi ei saa pakkuda, tagastatakse 50% ettemaks täielikult."
-    },
-    "q5": {
       "question": "Miks on ettemaks nõutud?",
       "answer": "Ettemaks tagab ajavahemiku ja katab sõiduaja. See hoiab ära viimase hetke tühistamised."
     },
-    "q6": {
+    "q5": {
       "question": "Kas diagnostika annab alati täpse vastuse?",
-      "answer": "Diagnostika annab suuna ja prioriteedid. Mõned mehaanilised probleemid võivad siiski vajada töökoja ülevaatust."
+      "answer": "Diagnostika annab suuna ja prioriteedid. Mõned mehaanilised probleemid võivad siiski vajada täiendavat kontrolli."
     },
-    "q7": {
+    "q6": {
       "question": "Kas saate kustutada veakoode?",
       "answer": "Jah, saame kustutada veakoode pärast diagnostikat."
     },
-    "q8": {
-      "question": "Miks võib remont võtta kauem kui teistes töökodades?",
-      "answer": "HealthGarage ei ole mahukäive teenus. Me eelistame hoolikat diagnostikale põhinevat tööd kiirusele."
-    },
-    "q9": {
+    "q7": {
       "question": "Kas saate teha kiireloomulist või sama päeva remonti?",
       "answer": "Ei. Me ei paku hädaabi ega kiirustatud remonti. Kui sõidukit on kiireloomuliselt vaja, soovitame suuremat töökoda."
     },
-    "q10": {
+    "q8": {
       "question": "Milliste autodega te töötate?",
-      "answer": "Enamik sõidukeid on diagnostika jaoks toetatud. Kiire hooldus on piiratud BMW, Mercedes-Benz ja VAG sõidukitega."
+      "answer": "Enamik sõidukeid on diagnostika jaoks toetatud. Kodeerimine on piiratud ainult Mercedes-Benz, BMW ja VAG grupi autodega."
+    },
+    "q9": {
+      "question": "Kuidas toimub tasumine?",
+      "answer": "Tasumine jaguneb kaheks: 50% ettemaks tasutakse broneeringu ja spetsialisti kohalesõidu tagamiseks, ülejäänud 50% tasutakse kohapeal enne töö algust."
     }
   },
   "booking": {
@@ -220,26 +230,42 @@
       },
       "service": {
         "title": "Teenus",
-        "description": "Ülejäänud 50% makstakse enne töö algust"
+        "description": "Ülejäänud 50% makstakse kohapeal enne töö algust"
       }
     },
-    "policies": {
+    "agreementPrefix": "Meiega ühendust võttes nõustute meie",
+    "agreementLink": "ettevõtte, makse- ja tagastamispoliitikaga",
+    "bookViaTelegram": "Broneeri Telegrami kaudu",
+    "callDirectly": "Helista otse",
+    "policyModal": {
+      "title": "Ettevõtte, makse- ja tagastamispoliitika",
+      "close": "Sulge",
+      "company": {
+        "title": "Ettevõtte poliitika",
+        "items": [
+          "Teenuseid osutab eraisikust ettevõtja ettevõtluskonto vahendusel.",
+          "HealthGarage on selle eraisikust ettevõtja bränd ega ole ametlikult registreeritud juriidiline isik.",
+          "Hinnad sisaldavad ettevõtluskonto kaudu teenuste osutamiseks vajalikke makse."
+        ]
+      },
       "payment": {
         "title": "Maksepoliitika",
-        "item1": "Ajavahemiku tagamiseks on vajalik 50% ettemaks.",
-        "item2": "Ülejäänud 50% makstakse enne töö algust.",
-        "item3": "Ettemaks katab sõiduaja ja hoiab ära viimase hetke tühistamised.",
-        "item4": "Hinnad kinnitatakse enne saabumist."
+        "items": [
+          "50% ettemaks tasutakse aja broneerimiseks ja spetsialisti kohalesõiduks. Ettemaks katab sõiduaja ja hoiab ära viimase hetke tühistamised.",
+          "Ülejäänud 50% makstakse kohapeal enne töö algust.",
+          "Hinnad kinnitatakse enne saabumist, broneerimise ajal.",
+          "Maksmiseks vajalikud LHV ettevõtluskonto andmed edastatakse broneeringu kinnitamisel."
+        ]
       },
       "refund": {
         "title": "Tagastamispoliitika",
-        "description": "Kui HealthGarage saabub ja ei suuda diagnostikat ega abi pakkuda, tagastatakse 50% viimasest töö eest olevast ettemaksust."
+        "items": [
+          "Kui diagnostikat üldse ei osutatud, tagastatakse 78% ettemaksu summast — 22% peetakse automaatselt kinni ettevõtluskonto poolt maksuna.",
+          "Kui diagnostikat ei osutatud kliendist tuleneval põhjusel (näiteks probleem OBD-pistikuga), ei tagastata ettemaksu esimest osa (50%) — see katab spetsialisti kohalesõidu, teist osa ei võeta.",
+          "Kui HealthGarage'i spetsialist sai teha ainult osalise diagnostika, tasutakse teenuse „Tavaline diagnostika” hinna alusel ja ülejäänud ettemaks tagastatakse — miinus 22% maks, mis peetakse automaatselt kinni ettevõtluskonto poolt."
+        ]
       }
-    },
-    "agreement": "Meiega ühendust võttes nõustute meie makse- ja tagastamispoliitikaga.",
-    "businessInfo": "Teenuseid osutab eraisikust ettevõtja ettevõtluskonto vahendusel.",
-    "bookViaTelegram": "Broneeri Telegrami Kaudu",
-    "callDirectly": "Helista Otse"
+    }
   },
   "testimonials": {
     "title": "Meie tööde näited",
@@ -267,9 +293,9 @@
   },
   "footer": {
     "title": "HealthGarage",
-    "subtitle": "Mobiilne Diagnostika ja Sõltumatu Garaazh",
+    "subtitle": "Mobiilne diagnostika ja sõltumatu garaaž",
     "contact": "Kontakt",
     "serviceArea": "Teeninduspiirkond",
-    "copyright": "HealthGarage — Diagnostika-Esmane Lähenemine"
+    "copyright": "HealthGarage — diagnostika-esmane lähenemine"
   }
 }

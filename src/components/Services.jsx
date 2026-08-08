@@ -1,72 +1,49 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faClipboardCheck, faScrewdriverWrench, faOilCan, faCode, faCheck, faCalculator, faCircleInfo, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faClipboardCheck, faCode, faCheck, faCalculator, faCircleInfo, faTriangleExclamation, faXmark, faCarSide } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../context/LanguageContext';
 import './Services.css';
 
 const Services = () => {
   const { t } = useLanguage();
   const [activeServiceType, setActiveServiceType] = useState('onsite'); // 'onsite' or 'mobile'
-  const [activeLocation, setActiveLocation] = useState('kehra'); // for onsite: 'kehra' or 'maardu'
   const [activeView, setActiveView] = useState('services'); // 'services' or 'calculator'
   const [distance, setDistance] = useState(30);
   const [pricingModel, setPricingModel] = useState('standard'); // 'standard' or 'alternative'
   const [selectedService, setSelectedService] = useState('basic'); // 'basic', 'full', or 'coding'
   const [region, setRegion] = useState('general'); // 'general' or 'tallinn'
-  
-  // On-site services for Kehra
-  const kehraOnsiteServices = [
-    {
-      icon: faSearch,
-      titleKey: 'services.onsite.basicDiagnostic.title',
-      price: '25 €',
-      featuresKey: 'services.onsite.basicDiagnostic.features'
-    },
-    {
-      icon: faClipboardCheck,
-      titleKey: 'services.onsite.fullDiagnostic.title',
-      price: '45 €',
-      featuresKey: 'services.onsite.fullDiagnostic.features'
-    },
-    {
-      icon: faCode,
-      titleKey: 'services.onsite.coding.title',
-      price: '60 € / ' + t('services.hour'),
-      featuresKey: 'services.onsite.coding.features'
-    },
-    {
-      icon: faScrewdriverWrench,
-      titleKey: 'services.onsite.repair.title',
-      price: '35 € / ' + t('services.hour'),
-      featuresKey: 'services.onsite.repair.features'
-    },
-    {
-      icon: faOilCan,
-      titleKey: 'services.onsite.maintenance.title',
-      price: '40 € / ' + t('services.hour'),
-      featuresKey: 'services.onsite.maintenance.features'
-    }
-  ];
+  const [isSupportedCarsOpen, setIsSupportedCarsOpen] = useState(false);
+
+  // Close supported cars modal on Escape key
+  useEffect(() => {
+    if (!isSupportedCarsOpen) return;
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') setIsSupportedCarsOpen(false);
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [isSupportedCarsOpen]);
 
   // On-site services for Maardu
   const maarduOnsiteServices = [
     {
       icon: faSearch,
       titleKey: 'services.onsite.basicDiagnostic.title',
-      price: '25 €',
+      price: '15 €',
       featuresKey: 'services.onsite.basicDiagnostic.features'
     },
     {
       icon: faClipboardCheck,
       titleKey: 'services.onsite.fullDiagnostic.title',
-      price: '45 €',
+      price: '30 €',
       featuresKey: 'services.onsite.fullDiagnostic.features'
     },
     {
       icon: faCode,
       titleKey: 'services.onsite.coding.title',
-      price: '60 € / ' + t('services.hour'),
-      featuresKey: 'services.onsite.coding.features'
+      price: '45 € / ' + t('services.hour'),
+      featuresKey: 'services.onsite.coding.features',
+      isCoding: true
     }
   ];
 
@@ -75,25 +52,30 @@ const Services = () => {
     {
       icon: faSearch,
       titleKey: 'services.mobile.basicDiagnostic.title',
-      price: '25 € + ' + t('services.kilometrage'),
+      price: '15 € + ' + t('services.kilometrage'),
       featuresKey: 'services.mobile.basicDiagnostic.features'
     },
     {
       icon: faClipboardCheck,
       titleKey: 'services.mobile.fullDiagnostic.title',
-      price: '45 € + ' + t('services.kilometrage'),
+      price: '30 € + ' + t('services.kilometrage'),
       featuresKey: 'services.mobile.fullDiagnostic.features'
     },
     {
       icon: faCode,
       titleKey: 'services.mobile.coding.title',
-      price: '60 € / ' + t('services.hour'),
-      featuresKey: 'services.mobile.coding.features'
+      price: '45 € / ' + t('services.hour'),
+      featuresKey: 'services.mobile.coding.features',
+      isCoding: true
     }
   ];
 
+  const sliderMin = pricingModel === 'alternative' ? 30 : 0;
+  const sliderMax = 200;
+  const distanceValue = Math.max(Number(distance) || 0, sliderMin);
+
   const calculateMobilePrice = useCallback(() => {
-    const dist = parseFloat(distance);
+    const dist = distanceValue;
     if (isNaN(dist) || dist < 0) return null;
 
     let serviceFee = 0;
@@ -103,17 +85,15 @@ const Services = () => {
     // Special pricing for Tallinn 18:00-19:00 (only for standard model)
     if (region === 'tallinn' && pricingModel === 'standard') {
       pricePerKm = 0.7;
-      if (selectedService === 'basic') serviceFee = 25;
-      else if (selectedService === 'full') serviceFee = 45;
-      else if (selectedService === 'coding') serviceFee = 60;
+      if (selectedService === 'basic') serviceFee = 15;
+      else if (selectedService === 'full') serviceFee = 30;
       total = serviceFee + (dist * pricePerKm);
     } else {
       // General pricing
       if (pricingModel === 'standard') {
         // Standard: Service fee + distance
-        if (selectedService === 'basic') serviceFee = 25;
-        else if (selectedService === 'full') serviceFee = 45;
-        else if (selectedService === 'coding') serviceFee = 60; // per hour, but showing base
+        if (selectedService === 'basic') serviceFee = 15;
+        else if (selectedService === 'full') serviceFee = 30;
 
         if (dist <= 50) pricePerKm = 0.5;
         else if (dist <= 100) pricePerKm = 0.4;
@@ -138,11 +118,13 @@ const Services = () => {
       distance: dist,
       total: total.toFixed(2)
     };
-  }, [distance, pricingModel, selectedService, region]);
+  }, [distanceValue, pricingModel, selectedService, region]);
 
-  const currentServices = activeServiceType === 'onsite' 
-    ? (activeLocation === 'kehra' ? kehraOnsiteServices : maarduOnsiteServices)
-    : mobileServices;
+  const currentServices = activeServiceType === 'onsite' ? maarduOnsiteServices : mobileServices;
+  const sliderMarks = pricingModel === 'alternative'
+    ? [{ value: 30, label: '30' }, { value: 50, label: '50' }, { value: 100, label: '100' }, { value: 150, label: '150' }, { value: 200, label: '200 km' }]
+    : [{ value: 0, label: '0' }, { value: 50, label: '50' }, { value: 100, label: '100' }, { value: 150, label: '150' }, { value: 200, label: '200 km' }];
+
 
   const renderServices = () => (
     <div className="services-grid">
@@ -161,10 +143,59 @@ const Services = () => {
               </li>
             ))}
           </ul>
+          {service.isCoding && (
+            <button
+              type="button"
+              className="supported-cars-link"
+              onClick={() => setIsSupportedCarsOpen(true)}
+            >
+              <FontAwesomeIcon icon={faCarSide} />
+              {t(`${service.titleKey.replace('.title', '')}.supportedCarsLink`)}
+            </button>
+          )}
         </div>
       ))}
     </div>
   );
+
+  const renderSupportedCarsModal = () => {
+    if (!isSupportedCarsOpen) return null;
+
+    return (
+      <div
+        className="modal-backdrop"
+        onClick={() => setIsSupportedCarsOpen(false)}
+        role="presentation"
+      >
+        <div
+          className="supported-cars-modal"
+          onClick={(e) => e.stopPropagation()}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="supported-cars-title"
+        >
+          <button
+            type="button"
+            className="modal-close"
+            onClick={() => setIsSupportedCarsOpen(false)}
+            aria-label={t('services.supportedCarsModal.close')}
+          >
+            <FontAwesomeIcon icon={faXmark} />
+          </button>
+          <h3 id="supported-cars-title">{t('services.supportedCarsModal.title')}</h3>
+          <p>{t('services.supportedCarsModal.description')}</p>
+          <ul className="supported-cars-list">
+            {t('services.supportedCarsModal.brands').map((brand, idx) => (
+              <li key={idx}>
+                <FontAwesomeIcon icon={faCheck} className="checkmark" />
+                {brand}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    );
+  };
 
   const renderCalculator = () => {
     const calculatedPrice = calculateMobilePrice();
@@ -229,12 +260,6 @@ const Services = () => {
               >
                 {t('services.calculator.fullDiag')}
               </button>
-              <button 
-                className={`service-btn ${selectedService === 'coding' ? 'active' : ''}`}
-                onClick={() => setSelectedService('coding')}
-              >
-                {t('services.calculator.coding')}
-              </button>
             </div>
           </div>
         )}
@@ -243,24 +268,31 @@ const Services = () => {
         <div className="distance-input">
           <div className="label-with-value">
             <label>{t('services.calculator.distance')}</label>
-            <span className="distance-value">{distance} km</span>
+            <span className="distance-value">{distanceValue} km</span>
           </div>
           <div className="slider-container">
             <input
               type="range"
-              min={pricingModel === 'alternative' ? "30" : "0"}
-              max="200"
+              min={sliderMin}
+              max={sliderMax}
               step="1"
-              value={distance}
-              onChange={(e) => setDistance(e.target.value)}
+              value={distanceValue}
+              onChange={(e) => setDistance(Number(e.target.value))}
               className="distance-slider"
             />
             <div className="slider-labels">
-              <span>0</span>
-              <span>50</span>
-              <span>100</span>
-              <span>150</span>
-              <span>200 km</span>
+              {sliderMarks.map((mark) => {
+                const percent = ((mark.value - sliderMin) / (sliderMax - sliderMin)) * 100;
+                return (
+                  <span
+                    key={mark.value}
+                    className="slider-mark"
+                    style={{ left: `calc(${percent}% + ${10 - percent * 0.2}px)` }}
+                  >
+                    {mark.label}
+                  </span>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -286,6 +318,9 @@ const Services = () => {
                 <span>{calculatedPrice.total} €</span>
               </div>
             </div>
+            <p className="coding-note">
+              <FontAwesomeIcon icon={faCircleInfo} /> Перед кодингом всегда будет выполнена обычная диагностика.
+            </p>
             {pricingModel === 'alternative' && (
               <div>
                 <p className="alternative-note">
@@ -331,24 +366,6 @@ const Services = () => {
           </button>
         </div>
 
-        {/* Location Tabs (only for on-site) */}
-        {activeServiceType === 'onsite' && (
-          <div className="location-tabs">
-            <button 
-              className={`location-tab ${activeLocation === 'kehra' ? 'active' : ''}`}
-              onClick={() => setActiveLocation('kehra')}
-            >
-              {t('services.locations.kehra')}
-            </button>
-            <button 
-              className={`location-tab ${activeLocation === 'maardu' ? 'active' : ''}`}
-              onClick={() => setActiveLocation('maardu')}
-            >
-              {t('services.locations.maardu')}
-            </button>
-          </div>
-        )}
-
         {/* View Tabs for Mobile (Services vs Calculator) */}
         {activeServiceType === 'mobile' && (
           <div className="view-tabs">
@@ -370,6 +387,8 @@ const Services = () => {
         {/* Render Services or Calculator */}
         {activeView === 'services' ? renderServices() : renderCalculator()}
       </div>
+
+      {renderSupportedCarsModal()}
     </section>
   );
 };

@@ -26,17 +26,6 @@ const Pricing = () => {
             
             <div className="location-pricing">
               <div className="location-block">
-                <h4>{t('pricing.onsite.kehra')}</h4>
-                <ul>
-                  <li>{t('pricing.onsite.kehraRepair')}: <strong>30 € / {t('pricing.hour')}</strong></li>
-                  <li>{t('pricing.onsite.kehraMaintenance')}: <strong>40 € / {t('pricing.hour')}</strong></li>
-                  <li>{t('pricing.onsite.basicDiag')}: <strong>25 €</strong></li>
-                  <li>{t('pricing.onsite.fullDiag')}: <strong>45 €</strong></li>
-                  <li>{t('pricing.onsite.coding')}: <strong>60 € / {t('pricing.hour')}</strong></li>
-                </ul>
-              </div>
-
-              <div className="location-block">
                 <h4>{t('pricing.onsite.maardu')}</h4>
                 <ul>
                   <li>{t('pricing.onsite.basicDiag')}: <strong>25 €</strong></li>

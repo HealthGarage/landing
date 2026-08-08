@@ -54,15 +54,11 @@ const Header = () => {
         <div className="header-container">
           {/* Logo */}
           <div className="logo">
-            <img 
-              src={theme === 'light' ? '/lightmodelogo.png' : '/darkmodelogo.png'} 
-              alt="HealthGarage" 
+            <img
+              src={theme === 'light' ? '/lightmodelogo.png' : '/darkmodelogo.png'}
+              alt="HealthGarage"
               className="logo-image"
             />
-            <div className="logo-text">
-              <h1>{t('header.title')}</h1>
-              <p className="logo-subtitle">{t('header.subtitle')}</p>
-            </div>
           </div>
 
           {/* Navigation */}

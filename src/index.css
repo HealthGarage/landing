@@ -70,6 +70,18 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Offset anchored sections so the sticky header doesn't cover their top
+   when navigating via nav links (desktop header is taller than mobile) */
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 768px) {
+  section[id] {
+    scroll-margin-top: 64px;
+  }
+}
+
 /* Selection */
 ::selection {
   background: var(--accent-color);

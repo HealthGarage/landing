@@ -9,7 +9,7 @@
 
 .section-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 0;
 }
 
 .section-header h2 {
@@ -27,71 +27,6 @@
   padding: 0 1rem;
 }
 
-.about-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.advantages-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-.advantage-card {
-  background: var(--bg-secondary);
-  padding: 2.5rem 2rem;
-  border-radius: 12px;
-  text-align: center;
-  transition: all 0.3s ease;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.advantage-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(255, 107, 53, 0.2);
-  border-color: var(--accent-color);
-}
-
-.advantage-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--accent-color), #ff8c42);
-  border-radius: 50%;
-  color: white;
-  font-size: 2.5rem;
-  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-}
-
-.advantage-card h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-  margin-top: 0;
-}
-
-.advantage-card p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
-.reasons-grid {
-  display: none;
-}
-
-.reason-item {
-  display: none;
-}
-
 @media (max-width: 768px) {
   .about-us {
     padding: 3rem 1rem;
@@ -99,24 +34,5 @@
 
   .section-header h2 {
     font-size: 2rem;
-  }
-
-  .advantages-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .advantage-card {
-    padding: 2rem 1.5rem;
-  }
-
-  .advantage-icon {
-    width: 70px;
-    height: 70px;
-    font-size: 2rem;
-  }
-
-  .advantage-card h3 {
-    font-size: 1.2rem;
   }
 }

@@ -31,13 +31,6 @@ const ServiceArea = () => {
           </div>
           <div className="area">
             <div className="area-icon">
-              <FontAwesomeIcon icon={faIndustry} />
-            </div>
-            <h4>{t('serviceArea.kehra.title')}</h4>
-            <p>{t('serviceArea.kehra.description')}</p>
-          </div>
-          <div className="area">
-            <div className="area-icon">
               <FontAwesomeIcon icon={faRoad} />
             </div>
             <h4>{t('serviceArea.outside.title')}</h4>

@@ -2,6 +2,7 @@ import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import AboutUs from './components/AboutUs'
+import WhyUs from './components/WhyUs'
 import Services from './components/Services'
 import ImportantInfo from './components/ImportantInfo'
 import Testimonials from './components/Testimonials'
@@ -15,9 +16,10 @@ function App() {
       <Header />
       <Hero />
       <AboutUs />
+      <WhyUs />
       <Services />
-      <ImportantInfo />
       <Testimonials />
+      <ImportantInfo />
       <FAQ />
       <Booking />
       <Footer />
