@@ -68,6 +68,9 @@ const Header = () => {
               <button onClick={() => scrollToSection('about-us')} className="nav-link">
                 {t('header.aboutUs')}
               </button>
+              <button onClick={() => scrollToSection('why-us')} className="nav-link">
+                {t('header.whyUs')}
+              </button>
               <button onClick={() => scrollToSection('services')} className="nav-link">
                 {t('header.services')}
               </button>
@@ -122,6 +125,9 @@ const Header = () => {
       <div className={`mobile-drawer ${isMenuOpen ? 'open' : ''}`}>
         <button onClick={() => scrollToSection('about-us')} className="drawer-link">
           {t('header.aboutUs')}
+        </button>
+        <button onClick={() => scrollToSection('why-us')} className="drawer-link">
+          {t('header.whyUs')}
         </button>
         <button onClick={() => scrollToSection('services')} className="drawer-link">
           {t('header.services')}
