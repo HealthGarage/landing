@@ -270,7 +270,6 @@
       "refund": {
         "title": "Tagastamispoliitika",
         "items": [
-          "Kui diagnostikat üldse ei osutatud, tagastatakse 78% ettemaksu summast — 22% peetakse automaatselt kinni ettevõtluskonto poolt maksuna.",
           "Kui diagnostikat ei osutatud kliendist tuleneval põhjusel (näiteks probleem OBD-pistikuga), ei tagastata ettemaksu esimest osa (50%) — see katab spetsialisti kohalesõidu, teist osa ei võeta.",
           "Kui HealthGarage'i spetsialist sai teha ainult osalise diagnostika, tasutakse teenuse „Tavaline diagnostika” hinna alusel ja ülejäänud ettemaks tagastatakse — miinus 22% maks, mis peetakse automaatselt kinni ettevõtluskonto poolt."
         ]
