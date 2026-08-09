@@ -18,6 +18,7 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
+            <span className="sr-only">HealthGarage — </span>
             {t('hero.title')} <span className="accent">{t('hero.titleAccent')}</span>
           </h1>
           <p className="hero-subtitle">
