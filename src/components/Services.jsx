@@ -4,6 +4,8 @@ import { faSearch, faClipboardCheck, faCode, faCheck, faCalculator, faCircleInfo
 import { useLanguage } from '../context/LanguageContext';
 import './Services.css';
 
+const CODING_HOUR_RATE = 45;
+
 const Services = () => {
   const { t } = useLanguage();
   const [activeServiceType, setActiveServiceType] = useState('onsite'); // 'onsite' or 'mobile'
@@ -11,8 +13,8 @@ const Services = () => {
   const [distance, setDistance] = useState(30);
   const [pricingModel, setPricingModel] = useState('standard'); // 'standard' or 'alternative'
   const [selectedService, setSelectedService] = useState('basic'); // 'basic', 'full', or 'coding'
-  const [region, setRegion] = useState('general'); // 'general' or 'tallinn'
   const [isSupportedCarsOpen, setIsSupportedCarsOpen] = useState(false);
+  const [isOnsiteTooltipOpen, setIsOnsiteTooltipOpen] = useState(false);
 
   // Close supported cars modal on Escape key
   useEffect(() => {
@@ -23,6 +25,18 @@ const Services = () => {
     window.addEventListener('keydown', handleEscape);
     return () => window.removeEventListener('keydown', handleEscape);
   }, [isSupportedCarsOpen]);
+
+  // Close on-site tooltip when tapping/clicking outside of it (for touch devices)
+  useEffect(() => {
+    if (!isOnsiteTooltipOpen) return;
+    const handleClickOutside = (e) => {
+      if (!e.target.closest('.info-tooltip-wrapper')) {
+        setIsOnsiteTooltipOpen(false);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [isOnsiteTooltipOpen]);
 
   // On-site services for Maardu
   const maarduOnsiteServices = [
@@ -80,14 +94,27 @@ const Services = () => {
 
     let serviceFee = 0;
     let pricePerKm = 0;
+    let codingFee = 0;
     let total = 0;
 
-    // Special pricing for Tallinn 18:00-19:00 (only for standard model)
-    if (region === 'tallinn' && pricingModel === 'standard') {
-      pricePerKm = 0.7;
-      if (selectedService === 'basic') serviceFee = 15;
-      else if (selectedService === 'full') serviceFee = 30;
-      total = serviceFee + (dist * pricePerKm);
+    if (selectedService === 'coding') {
+      if (pricingModel === 'standard') {
+        // Standard coding: basic diagnostic fee + distance rate + 1h coding
+        serviceFee = 15;
+        pricePerKm = 0.3;
+        codingFee = CODING_HOUR_RATE;
+        total = serviceFee + (dist * pricePerKm) + codingFee;
+      } else {
+        // Alternative coding: single per-km rate already covers diagnostic + coding
+        serviceFee = 0;
+        codingFee = 0;
+
+        if (dist <= 50) pricePerKm = 2.0;
+        else if (dist <= 100) pricePerKm = 1.5;
+        else pricePerKm = 1.2;
+
+        total = dist * pricePerKm;
+      }
     } else {
       // General pricing
       if (pricingModel === 'standard') {
@@ -115,10 +142,11 @@ const Services = () => {
     return {
       serviceFee,
       pricePerKm,
+      codingFee,
       distance: dist,
       total: total.toFixed(2)
     };
-  }, [distanceValue, pricingModel, selectedService, region]);
+  }, [distanceValue, pricingModel, selectedService]);
 
   const currentServices = activeServiceType === 'onsite' ? maarduOnsiteServices : mobileServices;
   const sliderMarks = pricingModel === 'alternative'
@@ -221,48 +249,30 @@ const Services = () => {
           </button>
         </div>
 
-        {/* Region Selection */}
-        <div className="region-selection">
-          <label>{t('services.calculator.selectRegion')}</label>
-          <div className="region-buttons">
-            <button 
-              className={`region-btn ${region === 'general' ? 'active' : ''}`}
-              onClick={() => setRegion('general')}
+        {/* Service Selection */}
+        <div className="service-selection">
+          <label>{t('services.calculator.selectService')}</label>
+          <div className="service-buttons">
+            <button
+              className={`service-btn ${selectedService === 'basic' ? 'active' : ''}`}
+              onClick={() => setSelectedService('basic')}
             >
-              {t('services.calculator.generalRegion')}
+              {t('services.calculator.basicDiag')}
             </button>
-            <button 
-              className={`region-btn ${region === 'tallinn' ? 'active' : ''}`}
-              onClick={() => setRegion('tallinn')}
+            <button
+              className={`service-btn ${selectedService === 'full' ? 'active' : ''}`}
+              onClick={() => setSelectedService('full')}
             >
-              {t('services.calculator.tallinnRegion')}
+              {t('services.calculator.fullDiag')}
+            </button>
+            <button
+              className={`service-btn ${selectedService === 'coding' ? 'active' : ''}`}
+              onClick={() => setSelectedService('coding')}
+            >
+              {t('services.calculator.coding')}
             </button>
           </div>
-          {pricingModel === 'standard' && region === 'tallinn' && (
-            <p className="rush-hour-note">{t('services.calculator.rushHourNote')}</p>
-          )}
         </div>
-
-        {/* Service Selection (only for standard model) */}
-        {pricingModel === 'standard' && (
-          <div className="service-selection">
-            <label>{t('services.calculator.selectService')}</label>
-            <div className="service-buttons">
-              <button 
-                className={`service-btn ${selectedService === 'basic' ? 'active' : ''}`}
-                onClick={() => setSelectedService('basic')}
-              >
-                {t('services.calculator.basicDiag')}
-              </button>
-              <button 
-                className={`service-btn ${selectedService === 'full' ? 'active' : ''}`}
-                onClick={() => setSelectedService('full')}
-              >
-                {t('services.calculator.fullDiag')}
-              </button>
-            </div>
-          </div>
-        )}
 
         {/* Distance Slider */}
         <div className="distance-input">
@@ -302,7 +312,7 @@ const Services = () => {
           <div className="price-result">
             <h4>{t('services.calculator.priceBreakdown')}</h4>
             <div className="breakdown-items">
-              {pricingModel === 'standard' && (
+              {calculatedPrice.serviceFee > 0 && (
                 <div className="breakdown-item">
                   <span>{t('services.calculator.serviceFee')}:</span>
                   <span>{calculatedPrice.serviceFee} €</span>
@@ -312,15 +322,28 @@ const Services = () => {
                 <span>{t('services.calculator.distanceFee')} ({calculatedPrice.pricePerKm} € / km):</span>
                 <span>{(calculatedPrice.distance * calculatedPrice.pricePerKm).toFixed(2)} €</span>
               </div>
+              {calculatedPrice.codingFee > 0 && (
+                <div className="breakdown-item">
+                  <span>{t('services.calculator.codingFee')}:</span>
+                  <span>{calculatedPrice.codingFee} €</span>
+                </div>
+              )}
               <div className="breakdown-divider"></div>
               <div className="breakdown-item total">
                 <span>{t('services.calculator.total')}:</span>
                 <span>{calculatedPrice.total} €</span>
               </div>
             </div>
-            <p className="coding-note">
-              <FontAwesomeIcon icon={faCircleInfo} /> Перед кодингом всегда будет выполнена обычная диагностика.
-            </p>
+            {selectedService === 'coding' && (
+              <div>
+                <p className="coding-note">
+                  <FontAwesomeIcon icon={faCircleInfo} /> {t('services.calculator.codingBeforeNote')}
+                </p>
+                <p className="coding-note">
+                  <FontAwesomeIcon icon={faCircleInfo} /> {t('services.calculator.codingHourNote')}
+                </p>
+              </div>
+            )}
             {pricingModel === 'alternative' && (
               <div>
                 <p className="alternative-note">
@@ -365,6 +388,34 @@ const Services = () => {
             {t('services.types.mobile')}
           </button>
         </div>
+
+        {/* On-site Explanation Note */}
+        {activeServiceType === 'onsite' && (
+          <p className="service-type-explanation">
+            <span
+              className="info-tooltip-wrapper"
+              onClick={() => setIsOnsiteTooltipOpen((open) => !open)}
+            >
+              <FontAwesomeIcon
+                icon={faCircleInfo}
+                className="info-tooltip-icon"
+                tabIndex={0}
+                role="button"
+                aria-label={t('services.onsiteExplanationTooltip')}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setIsOnsiteTooltipOpen((open) => !open);
+                  }
+                }}
+              />
+              <span className={`info-tooltip-content ${isOnsiteTooltipOpen ? 'open' : ''}`} role="tooltip">
+                {t('services.onsiteExplanationTooltip')}
+              </span>
+            </span>{' '}
+            {t('services.onsiteExplanation')}
+          </p>
+        )}
 
         {/* View Tabs for Mobile (Services vs Calculator) */}
         {activeServiceType === 'mobile' && (

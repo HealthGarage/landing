@@ -61,6 +61,28 @@
   font-weight: 500;
 }
 
+.info-item-list {
+  grid-column: 1 / -1;
+}
+
+.info-item-title {
+  margin-bottom: 12px;
+}
+
+.info-item-list ul {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-item-list li {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   .important-info {
     padding: 60px 20px;

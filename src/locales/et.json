@@ -49,6 +49,8 @@
       "mobile": "Väljasõiduga"
     },
     "mobileExplanation": "Me tuleme teie juurde professionaalse varustusega",
+    "onsiteExplanation": "Teenus „Kohapeal” on saadaval ainult Maardu linnas",
+    "onsiteExplanationTooltip": "Teenus „Kohapeal” tähendab, et klient tuleb ise autoga Maardu linna või asub juba Maardu linnas, et teostada auto diagnostikat",
     "locations": {
       "maardu": "Maardu"
     },
@@ -126,22 +128,21 @@
       "title": "Väljasõidu teenuse kalkulaator",
       "description": "Arvutage väljasõidu teenuse kulu sõltuvalt kaugusest",
       "standard": "Standardne",
-      "alternative": "Alternatiivne",      
-      "selectRegion": "Väljasõidu tingimus:",
-      "generalRegion": "Tavalised",
-      "tallinnRegion": "Tipptund",
-      "rushHourNote": "Tipptund: 18:00 kuni 18:45 Tallinnas ja Maardus (0.7 € / km).",
+      "alternative": "Alternatiivne",
       "selectService": "Valige teenus:",
       "basicDiag": "Tavaline diagnostika",
       "fullDiag": "Täielik diagnostika",
-      "coding": "Kodeerimine",
+      "coding": "Kodeerimine / Adaptatsioon",
       "distance": "Kaugus",
       "priceBreakdown": "Hinna arvutus:",
       "serviceFee": "Teenus",
       "distanceFee": "km-tasu",
+      "codingFee": "Kodeerimine (1 tund)",
       "total": "Kokku",
       "alternativeNote": "Alternatiivses mudelis on teenus tasuta, kuid kilomeetri hind on kõrgem",
-      "alternativeRestriction": "Alternatiivne mudel: miinimum 30 km. Ei kehti Maardus ja Tallinnas."
+      "alternativeRestriction": "Alternatiivne mudel: miinimum 30 km. Ei kehti Maardus ja Tallinnas.",
+      "codingBeforeNote": "Enne kodeerimist tehakse alati tavalise diagnostika teenus.",
+      "codingHourNote": "Kalkulaator arvutab hinna kodeerimise tunnihinna alusel, eeldades, et teenus võtab 1 tunni."
     },
     "supportedCarsModal": {
       "title": "Kodeerimist toetavad autod",
@@ -163,8 +164,16 @@
     "noEmergency": "Kiireloomulisi või hädaolukorras remonditöid ei tehta",
     "errorClearingSafe": "Vigade kustutamine toimub ohutult, autole riski tekitamata",
     "pricesConfirmed": "Hinnad kinnitatakse enne saabumist",
-    "nightTariffs": "Kehtivad kõrgendatud tariifid tööpäevadel kell 21:00 kuni 09:00 Eesti aja järgi: x2 Maardus ja Tallinnas, x2.5 väljaspool",
-    "weekendTariffs": "Kehtivad kõrgendatud tariifid nädalavahetustel ja riigipühadel: x2 Maardus ja Tallinnas, x2.5 väljaspool"
+    "workingHours": "Töötame iga päev kell 16:00 kuni 00:00 Eesti aja järgi",
+    "increasedTariffs": {
+      "title": "Kõrgendatud tariifid kehtivad järgmistel juhtudel:",
+      "items": [
+        "Tööpäeviti kell 00:00 kuni 09:00 Eesti aja järgi — x2 Maardus ja Tallinnas, x2.5 väljaspool",
+        "Nädalavahetustel kell 17:00 kuni 09:00 Eesti aja järgi — x2 Maardus ja Tallinnas, x2.5 väljaspool",
+        "Riigipühadel — x2 Maardus ja Tallinnas, x2.5 väljaspool"
+      ]
+    },
+    "rushHourWaitTime": "Tipptunni ajal võib ooteaeg suureneda suurenenud liiklustiheduse tõttu"
   },
   "faq": {
     "title": "Korduma kippuvad küsimused",
@@ -179,7 +188,7 @@
     },
     "q3": {
       "question": "Miks hiline õhtu on kallim?",
-      "answer": "Kella 21:00 kuni 09:00 kehtib hiliste tundide tariif piiratud kättesaadavuse ja pikendatud tööaja tõttu."
+      "answer": "Kella 00:00 kuni 09:00 kehtib hiliste tundide tariif piiratud kättesaadavuse ja pikendatud tööaja tõttu."
     },
     "q4": {
       "question": "Miks on ettemaks nõutud?",
