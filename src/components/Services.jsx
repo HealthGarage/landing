@@ -1,10 +1,11 @@
 import { useState, useCallback, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faClipboardCheck, faCode, faCheck, faCalculator, faCircleInfo, faTriangleExclamation, faXmark, faCarSide } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faClipboardCheck, faCode, faCheck, faCalculator, faCircleInfo, faTriangleExclamation, faXmark, faCarSide, faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../context/LanguageContext';
 import './Services.css';
 
 const CODING_HOUR_RATE = 45;
+const MECHANICAL_HOUR_RATE = 25;
 
 const Services = () => {
   const { t } = useLanguage();
@@ -58,6 +59,12 @@ const Services = () => {
       price: '45 € / ' + t('services.hour'),
       featuresKey: 'services.onsite.coding.features',
       isCoding: true
+    },
+    {
+      icon: faScrewdriverWrench,
+      titleKey: 'services.onsite.mechanicalDiagnostic.title',
+      price: '25 € / ' + t('services.hour'),
+      featuresKey: 'services.onsite.mechanicalDiagnostic.features'
     }
   ];
 
@@ -81,6 +88,12 @@ const Services = () => {
       price: '45 € / ' + t('services.hour'),
       featuresKey: 'services.mobile.coding.features',
       isCoding: true
+    },
+    {
+      icon: faScrewdriverWrench,
+      titleKey: 'services.mobile.mechanicalDiagnostic.title',
+      price: '25 € / ' + t('services.hour'),
+      featuresKey: 'services.mobile.mechanicalDiagnostic.features'
     }
   ];
 
@@ -95,6 +108,7 @@ const Services = () => {
     let serviceFee = 0;
     let pricePerKm = 0;
     let codingFee = 0;
+    let mechanicalFee = 0;
     let total = 0;
 
     if (selectedService === 'coding') {
@@ -112,6 +126,21 @@ const Services = () => {
         if (dist <= 50) pricePerKm = 2.0;
         else if (dist <= 100) pricePerKm = 1.5;
         else pricePerKm = 1.2;
+
+        total = dist * pricePerKm;
+      }
+    } else if (selectedService === 'mechanical') {
+      if (pricingModel === 'standard') {
+        // Standard mechanical diagnostic: basic diagnostic fee + distance rate + 1h mechanical work
+        serviceFee = 15;
+        pricePerKm = 0.3;
+        mechanicalFee = MECHANICAL_HOUR_RATE;
+        total = serviceFee + (dist * pricePerKm) + mechanicalFee;
+      } else {
+        // Alternative mechanical diagnostic: single per-km rate already covers everything
+        serviceFee = 0;
+        mechanicalFee = 0;
+        pricePerKm = 2.5;
 
         total = dist * pricePerKm;
       }
@@ -143,6 +172,7 @@ const Services = () => {
       serviceFee,
       pricePerKm,
       codingFee,
+      mechanicalFee,
       distance: dist,
       total: total.toFixed(2)
     };
@@ -271,6 +301,12 @@ const Services = () => {
             >
               {t('services.calculator.coding')}
             </button>
+            <button
+              className={`service-btn ${selectedService === 'mechanical' ? 'active' : ''}`}
+              onClick={() => setSelectedService('mechanical')}
+            >
+              {t('services.calculator.mechanicalDiag')}
+            </button>
           </div>
         </div>
 
@@ -328,6 +364,12 @@ const Services = () => {
                   <span>{calculatedPrice.codingFee} €</span>
                 </div>
               )}
+              {calculatedPrice.mechanicalFee > 0 && (
+                <div className="breakdown-item">
+                  <span>{t('services.calculator.mechanicalFee')}:</span>
+                  <span>{calculatedPrice.mechanicalFee} €</span>
+                </div>
+              )}
               <div className="breakdown-divider"></div>
               <div className="breakdown-item total">
                 <span>{t('services.calculator.total')}:</span>
@@ -341,6 +383,16 @@ const Services = () => {
                 </p>
                 <p className="coding-note">
                   <FontAwesomeIcon icon={faCircleInfo} /> {t('services.calculator.codingHourNote')}
+                </p>
+              </div>
+            )}
+            {selectedService === 'mechanical' && (
+              <div>
+                <p className="coding-note">
+                  <FontAwesomeIcon icon={faCircleInfo} /> {t('services.calculator.mechanicalBeforeNote')}
+                </p>
+                <p className="coding-note">
+                  <FontAwesomeIcon icon={faCircleInfo} /> {t('services.calculator.mechanicalHourNote')}
                 </p>
               </div>
             )}

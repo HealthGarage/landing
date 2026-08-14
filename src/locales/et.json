@@ -78,13 +78,21 @@
         ]
       },
       "coding": {
-        "title": "Kodeerimine",
+        "title": "Adaptatsioon ja kodeerimine (elektroonika seadistamine)",
         "features": [
           "Long coding, adaptatsioonid",
           "Töökindluse kontroll",
           "Makse ainult töö aja eest"
         ],
         "supportedCarsLink": "Toetatud autod"
+      },
+      "mechanicalDiagnostic": {
+        "title": "Mehaaniline diagnostika",
+        "features": [
+          "Rikke põhjuse tuvastamine",
+          "Remondi maksumuse esialgne hinnang",
+          "Tasu töö aja ja tavalise diagnostika teenuse eest"
+        ]
       },
       "maintenance": {
         "title": "Kiire hooldus",
@@ -122,6 +130,14 @@
           "Töökindluse kontroll kaasas"
         ],
         "supportedCarsLink": "Toetatud autod"
+      },
+      "mechanicalDiagnostic": {
+        "title": "Mehaaniline diagnostika",
+        "features": [
+          "Rikke tuvastamine",
+          "Remondi maksumuse esialgne hinnang",
+          "Tasu töö aja ja tavalise diagnostika teenuse eest"
+        ]
       }
     },
     "calculator": {
@@ -133,16 +149,20 @@
       "basicDiag": "Tavaline diagnostika",
       "fullDiag": "Täielik diagnostika",
       "coding": "Kodeerimine / Adaptatsioon",
+      "mechanicalDiag": "Mehaaniline diagnostika",
       "distance": "Kaugus",
       "priceBreakdown": "Hinna arvutus:",
       "serviceFee": "Teenus",
       "distanceFee": "km-tasu",
       "codingFee": "Kodeerimine (1 tund)",
+      "mechanicalFee": "Mehaaniline diagnostika (1 tund)",
       "total": "Kokku",
       "alternativeNote": "Alternatiivses mudelis on teenus tasuta, kuid kilomeetri hind on kõrgem",
       "alternativeRestriction": "Alternatiivne mudel: miinimum 30 km. Ei kehti Maardus ja Tallinnas.",
       "codingBeforeNote": "Enne kodeerimist tehakse alati tavalise diagnostika teenus.",
-      "codingHourNote": "Kalkulaator arvutab hinna kodeerimise tunnihinna alusel, eeldades, et teenus võtab 1 tunni."
+      "codingHourNote": "Kalkulaator arvutab hinna kodeerimise tunnihinna alusel, eeldades, et teenus võtab 1 tunni.",
+      "mechanicalBeforeNote": "Enne mehaanilist diagnostikat tehakse alati tavalise diagnostika teenus.",
+      "mechanicalHourNote": "Kalkulaator arvutab hinna mehaanilise diagnostika tunnihinna alusel, eeldades, et teenus võtab 1 tunni."
     },
     "supportedCarsModal": {
       "title": "Kodeerimist toetavad autod",
